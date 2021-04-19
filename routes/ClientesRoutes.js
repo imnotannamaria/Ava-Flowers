@@ -9,6 +9,6 @@ router.post('/', validarCadastro, clientesController.create);
 
 router.put('/:id', clientesController.update);
 
-router.delete('/:id/:id', clientesController.delete);
+router.delete('/:id', clientesController.delete);
 
 module.exports = router;
