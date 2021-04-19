@@ -3,7 +3,6 @@ const router = express.Router();
 const clientesController = require('../controllers/clientesController');
 const validarCadastro = require('../middlewares/ValidarCadastro');
 
-
 router.get('/', clientesController.index);
 
 router.post('/', validarCadastro, clientesController.create);
