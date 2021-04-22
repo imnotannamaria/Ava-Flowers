@@ -1,4 +1,4 @@
-const { Pagamento, sequelize } = require('../models/');
+const { Pagamento, sequelize } = require('../models');
 
 const PagamentoController = {
   index: async (req, res) => {

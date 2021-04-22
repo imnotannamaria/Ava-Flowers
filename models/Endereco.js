@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Endereco.associate = (models) => {
-    Endereco.belongsToMany(models.Cliente, {
-      as: 'cadastrado', // alias da relação
-      through: 'clientes', // tabela intermediária
-      foreignKey: 'clientes_id',
-      otherKey: 'id',
-      timestamps: false,
+    Endereco.belongsTo(models.Cliente, {
+        as: 'cadastrado', // alias da relação
+        through: 'clientes', // tabela intermediária
+        foreignKey: 'id',
+        timestamps: false
     });
-  };
+
+}
 
   return Endereco;
 };
