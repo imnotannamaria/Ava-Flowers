@@ -11,7 +11,6 @@ module.exports = ( Sequelize, DataTypes) => {
                 timestamps: false,
             }
     );
-  
 
 //lincar as chaves
 

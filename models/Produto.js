@@ -12,10 +12,9 @@ module.exports = ( Sequelize, DataTypes) => {
                 timestamps: false,
             }
     );
-  
 
  //lincar as chaves
- Produto.associate = (models) => {
+Produto.associate = (models) => {
     Produto.belongsToMany(models.Categoria, {
         as: 'disponivel', // alias da relação
         through: 'categoria', // tabela intermediária
@@ -24,25 +23,8 @@ module.exports = ( Sequelize, DataTypes) => {
         timestamps: false,
     });
 
- }
+}
 return Produto;
 
-};
-
-module.exports = (sequelize, Datatypes) => {
-  const Produto = sequelize.define(
-    'Produto',
-    {
-      tipo: Datatypes.STRING,
-      tipoFlor: Datatypes.STRING,
-      valor: Datatypes.FLOAT,
-      quantidade: Datatypes.INTEGER,
-    },
-    {
-      tableName: 'produtos',
-      timestamps: false,
-    }
-  );
-  return Produto;
 };
 

@@ -11,11 +11,7 @@ module.exports = ( Sequelize, DataTypes) => {
                 timestamps: false,
             }
     );
-  
-
-
-
-
 
 return Status;
+
 };
