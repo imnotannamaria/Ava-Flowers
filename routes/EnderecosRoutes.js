@@ -8,6 +8,7 @@ router.get('/', enderecosController.index);
 
 router.post('/', ValidarEndereco, enderecosController.create);
 
+
 router.get('/', enderecosController.index);
 
 router.post('/', enderecosController.create);

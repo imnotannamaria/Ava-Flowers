@@ -14,6 +14,20 @@
     "morgan": "~1.9.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
-    "sequelize": "^6.6.2"
-  }
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imnotannamaria/Ava-Flowers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imnotannamaria/Ava-Flowers/issues"
+  },
+  "homepage": "https://github.com/imnotannamaria/Ava-Flowers#readme",
+  "description": ""
 }

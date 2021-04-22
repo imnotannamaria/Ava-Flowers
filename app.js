@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var ClienteRoutes = require('./routes/ClientesRoutes');
 var EnderecoRoutes = require('./routes/EnderecosRoutes');
+var ProdutoRoutes = require ('../Ava-Flowers/routes/ProdutosRoutes');
+var CategoriaRoutes = require('../Ava-Flowers/routes/CategoriasRoutes');
 var ProdutoRoutes = require('./routes/ProdutosRoutes');
 
 var app = express();
@@ -25,6 +27,8 @@ app.use('/', indexRouter);
 app.use('/clientes', ClienteRoutes);
 app.use('/enderecos', EnderecoRoutes);
 app.use('/produtos', ProdutoRoutes);
+app.use('/categorias', CategoriaRoutes);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
