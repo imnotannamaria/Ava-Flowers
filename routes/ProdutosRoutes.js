@@ -1,11 +1,11 @@
 const express = require ('express');
 const router = express.Router();
 const ProdutosController = require('../controllers/ProdutosController');
-const ValidarProduto = require ('../middlewares/ValidarProduto')
+//const ValidarProduto = require ('../middlewares/ValidarProduto')
 
 router.get('/', ProdutosController.index);
 
-router.post('/' , ValidarProduto, ProdutosController.create);
+router.post('/' , ProdutosController.create);
 
 router.put('/:id' , ProdutosController.update);
 

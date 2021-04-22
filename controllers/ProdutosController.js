@@ -8,13 +8,14 @@ const ProdutosController = {
     },
 
     create: async(req,res)=>{
-        let { tipo, tipoFlor, valor, quantidade } = req.body;
+        let { nome,  valor, quantidadeEstoque,  categoria_id} = req.body;
+        
 
         let  novoProduto = await Produto.create({
-            tipo,
-            tipoFlor,
+            nome,
             valor,
-            quantidade,
+            quantidadeEstoque,
+            categoria_id,
         });
         return res.json(novoProduto);
     },
@@ -23,7 +24,7 @@ const ProdutosController = {
 
         const {id} = req.params;
   
-        const {tipo, tipoFlor, valor,quantidade} = req.body;
+        const {nome, valor,quantidadeEstoque, categoria_id} = req.body;
   
        
   
@@ -31,13 +32,13 @@ const ProdutosController = {
   
             {
   
-                tipo,
-  
-                tipoFlor,
-  
+                nome,
+    
                 valor,
   
-                quantidade,
+                quantidadeEstoque,
+
+                categoria_id,
   
             },
   

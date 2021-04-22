@@ -11,10 +11,21 @@ module.exports = (sequelize, DataTypes) => {
       complemento: DataTypes.STRING,
     },
     {
-      tableName: 'enderecos',
+      tableName: 'endereco',
       timestamps: false,
     }
   );
+  Endereco.associate = (models) => {
+    Endereco.belongsToMany(models.Cliente, {
+        as: 'cadastrado', // alias da relação
+        through: 'clientes', // tabela intermediária
+        foreignKey: 'clientes_id',
+        otherKey: 'endereco_id',
+        timestamps: false,
+    });
+
+ }
+  
 
   return Endereco;
 };
