@@ -10,6 +10,7 @@ var EnderecoRoutes = require('./routes/EnderecosRoutes');
 var ProdutoRoutes = require ('./routes/ProdutosRoutes');
 var CategoriaRoutes = require('./routes/CategoriasRoutes');
 var ProdutoRoutes = require('./routes/ProdutosRoutes');
+var VendaRoutes = require('./routes/VendasRoutes');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/clientes', ClienteRoutes);
 app.use('/enderecos', EnderecoRoutes);
 app.use('/produtos', ProdutoRoutes);
 app.use('/categorias', CategoriaRoutes);
+app.use('/vendas', VendaRoutes);
 
 
 // catch 404 and forward to error handler

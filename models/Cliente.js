@@ -6,22 +6,28 @@ module.exports = (sequelize, DataTypes) => {
       nome: DataTypes.STRING,
       email: DataTypes.STRING,
       senha: DataTypes.STRING,
-      endereco_id: DataTypes.INTEGER,
+      endereco_id: DataTypes.INTEGER
     },
     {
       tableName: 'clientes',
-      timestamps: false,
+      timestamps: false
     }
   );
 
   Cliente.associate = (models) => {
-    Cliente.hasMany(models.Endereco , {
-       as: 'enderecos',
-       foreignKey: 'endereco_id',
-     });
-    };
 
-  
+    Cliente.hasMany(models.Endereco, {
+      as: 'enderecos',
+      foreignKey: 'id'
+    });
+
+    Cliente.hasMany(models.Venda, {
+      as: 'vendas',
+      foreignKey: 'id'
+    });
+
+  };
+
 
 
 
