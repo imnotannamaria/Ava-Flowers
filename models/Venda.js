@@ -48,7 +48,6 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   return Venda;
-=======
     // define(nomeModel, colunas, config)
    // const Venda = sequelize.define('Venda', {
    //     valorTotal: DataTypes.DOUBLE,

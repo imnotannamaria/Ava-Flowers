@@ -10,7 +10,7 @@ const PagamentoController = {
     let { nome } = req.body;
 
     let NovoPagamento = await Pagamento.create({
-      nome,
+      nome
     });
 
     return res.json(NovoPagamento);
