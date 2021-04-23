@@ -11,17 +11,16 @@ module.exports = ( Sequelize, DataTypes) => {
                 timestamps: false,
             }
     );
-  
 
 //lincar as chaves
 
  // relação 1:N (um categoria para varios produtos)
- Categoria.associate = (models) => {
- Categoria.hasMany(models.Produto , {
-    as: 'produtos',
-    foreignKey: 'categoria_id',
-  });
- }
- 
+Categoria.associate = (models) => {
+    Categoria.hasMany(models.Produto , {
+        as: 'produtos',
+        foreignKey: 'categoria_id',
+    });
+}
+
 return Categoria;
 };

@@ -21,39 +21,22 @@ const ProdutosController = {
     },
 
     update: async (req,res) =>{
-
         const {id} = req.params;
-  
         const {nome, valor,quantidadeEstoque, categoria_id} = req.body;
-  
-       
-  
         const produto = await Produto.update(
-  
             {
-  
                 nome,
-    
                 valor,
-  
                 quantidadeEstoque,
-
                 categoria_id,
-  
             },
-  
             {
-  
                 where:{id},
-  
             }
-  
         );
-  
-         return res.json(produto);
-  
+        return res.json(produto);
     },
-  
+
     delete: async (req,res) => {
         const{id} = req.params;
 
@@ -62,7 +45,6 @@ const ProdutosController = {
         });
         return res.json(produto);
     },
-  
 
 };
 module.exports = ProdutosController;
