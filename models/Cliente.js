@@ -15,15 +15,11 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Cliente.associate = (models) => {
-    Cliente.hasMany(models.Endereco , {
-       as: 'enderecos',
-       foreignKey: 'endereco_id',
-     });
-    };
-
-  
-
-
+    Cliente.hasMany(models.Endereco, {
+      as: 'enderecos',
+      foreignKey: 'id',
+    });
+  };
 
   return Cliente;
 };
