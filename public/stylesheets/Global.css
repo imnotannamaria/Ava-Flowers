@@ -18,6 +18,10 @@ button{
     cursor: pointer;
 }
 
+.container{
+    max-width: 1500px;
+}
+
 :root {
     --orange: #FE934E;
     --yellow: #FCCA46;
@@ -31,6 +35,9 @@ button{
 
 header{
     background-color: var(--orange);
+    /* position: fixed;
+    z-index: 1;
+    width: 100%; */
 }
 
 .header-wrapper-top{
@@ -39,7 +46,12 @@ header{
 }
 
 .logoHeader{
-    padding: 10px 50px;
+    padding: 10px 0 0 20px;
+}
+
+.logoHeader img{
+    width: 180px;
+    height: 90px;
 }
 
 .header-buscar{
@@ -63,8 +75,12 @@ header{
 
 .header-carrinho{
     cursor: pointer;
-    flex: right;
-    padding: 0 50px;
+    margin-right: 20px;
+}
+
+.header-carrinho img{
+    width: 60px;
+    height: 60px;
 }
 
 .header-wrapper-bot{
@@ -79,4 +95,156 @@ header{
     color: white;
     font-size: 25px;
     line-height: 60px;
+}
+
+/* CONTATO */
+/* ============================================================================================= */
+
+.contato{
+    background-color: var(--green);
+    color: white;
+    padding: 40px 50px;
+}
+
+.contato-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contato h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo-contato{
+    display: flex;
+    align-items: center;
+}
+
+.form-contato{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.form-contato p{
+    font-size: 28px;
+}
+
+.form-contato input{
+    height: 60px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.form-contato textarea{
+    border: 0;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.form-contato  button{
+    width: 20%;
+    height: 40px;
+    background-color: var(--orange);
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+
+/* FOOTER */
+/* ============================================================================================= */
+
+footer{
+    background-color: var(--orange);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.icon-wrapper{
+    background-color: rgba(232,110,32, 0.5);
+    margin-right: 20px;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ============================================================================================ */
+/* RESPONSIVO */
+
+@media only screen and (max-width: 900px) {
+    /* HEADER */
+    /* ============================= */
+    .header-wrapper-bot a{
+        margin: 0 50px 0 50px;
+        font-size: 18px;
+        line-height: 60px;
+    }
+
+    /* CONTATO */
+    /* ============================= */
+    .contato-wrapper{
+        flex-direction: column;
+    }
+
+    .logo-contato{
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form-contato{
+        margin: 30px 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    /* HEADER */
+    /* ============================= */
+    .header-wrapper-top{
+        flex-direction: column;
+    }
+
+    .logoHeader{
+        padding: 0;
+        padding: 20px 0;
+    }
+    
+    .header-buscar{
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .header-carrinho{
+        padding: 10px 0;
+    }
+
+    .header-wrapper-bot a{
+        margin: 0 50px 0 50px;
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 20px;
+    }
+
 }

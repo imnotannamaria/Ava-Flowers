@@ -1,0 +1,108 @@
+/* SECTION COVER */
+/* ============================================================================================= */
+
+.cover-section .bg-cover > img{
+    width: 100%;
+    position: absolute;
+    background-position: 100% 100%;
+    height: 400px
+}
+
+.cover-section .cover-logo > img{
+    position: relative;
+    top: 2rem;
+}
+
+/* SECTION MAIS VENDIDOS*/
+/* ============================================================================================= */
+
+.mais-vendidias{
+    margin-top: 200px;
+}
+
+.card{
+    border: 0;
+    margin-bottom: 100px;
+    margin-right: 80px;
+}
+
+.cardinfo{
+    background-color: var(--brown);
+    color: white;
+    display: flex;
+    flex-direction:column;
+    border-radius: 0 0 20px 20px;
+    margin-top: -2px;
+}
+
+
+.cardinfo p{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.preco-mais{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border: 0 20px 0 20px;
+}
+
+.preco-mais .preco{
+    font-size: 20px;
+    background-color: #C37F50;
+    padding: 10px 20px;
+    border-radius: 7px;
+    margin-left: 2rem;
+}
+
+.preco-mais .mais{
+    width: 60px;
+    font-size: 40px;
+    background-color: #C37F50;
+    padding: 10px;
+    color: var(--green);
+    border-radius: 7px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 620px) {
+
+    /* SECTION COVER */
+    /* ============================= */
+    .cover-section .cover-logo > img{
+        left: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 1220px) {
+
+    .card{
+        margin-right: 0;
+    }
+
+}
+
+
