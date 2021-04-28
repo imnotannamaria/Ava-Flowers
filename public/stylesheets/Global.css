@@ -83,6 +83,10 @@ header{
     height: 60px;
 }
 
+.header-carrinho img:hover{
+    margin-bottom: 3px;
+}
+
 .header-wrapper-bot{
     display: flex;
     justify-content: center;
@@ -133,7 +137,7 @@ header{
 }
 
 .form-contato input{
-    height: 60px;
+    height: 50px;
     margin-bottom: 20px;
     width: 100%;
     border: 0;
@@ -159,6 +163,10 @@ header{
     border-radius: 10px;
 }
 
+.form-contato  button:hover{
+    background-color: #ca6c2e;
+    transition: 1s;
+}
 
 /* FOOTER */
 /* ============================================================================================= */
@@ -186,8 +194,12 @@ footer .social{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
+.icon-wrapper a:hover{
+    margin-bottom: 10px;
+}
 
 
 /* ============================================================================================ */

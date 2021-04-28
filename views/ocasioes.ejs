@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/Global.css">
+    <link rel="stylesheet" href="/stylesheets/Index.css">
+    <title>Ava Flowers</title>
+    <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
+</head>
+<body>
+    <header>
+        <div class="header-wrapper-top">
+            <a href="">
+                <div class="logoHeader">
+                    <img src="/images/LogoHeader.png" alt="">
+                </div>
+            </a>
+            <div class="header-buscar">
+                <input type="text">
+                <img src="/images/icons/lupa.png" alt="">
+            </div>
+            <div class="header-carrinho">
+                <img src="/images/Carrinho.png" alt="">
+            </div>
+        </div>
+        
+        <div class="header-wrapper-bot">
+            <a href="#todasFlores.ejs">Todas as Flores</a>
+            <a href="#buques.ejs">Buquês</a>
+            <a href="#ocasioes.ejs">Ocasiões especiais</a>
+            </ul>
+        </div>
+    </header>
+
+    <section class="contato">
+        <h1>Contato</h1>
+        <div class="contato-wrapper">
+            <div class="logo-contato">
+                <img src="/images/logoCompelta.png" alt="">
+            </div>
+            <div class="form-contato">
+                <p>Mande uma mensagem: </p>
+                <input type="text" name="nome" placeholder ="Digite seu nome">
+                <input type="email" name="email" placeholder ="Digite seu email">
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder ="Digite sua mensagem"></textarea>
+                <button type="submit" id="btn-subimit-contact">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <h3>Outros meios de contato</h3>
+                    <div class="social">
+                        <div class="icon-wrapper">
+                            <a href=""><img src="/images/icons/whatsapp.png" alt=""></a>
+                        </div>
+                        <div class="icon-wrapper">
+                            <a href=""><img src="/images/icons/email.png" alt=""></a>
+                        </div>
+                        <div class="icon-wrapper">
+                            <a href=""><img src="/images/icons/instagram.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
