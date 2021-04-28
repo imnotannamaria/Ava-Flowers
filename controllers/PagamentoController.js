@@ -6,6 +6,18 @@ const PagamentoController = {
         return res.json(tipos_pagamento);
     },
 
+    cadastro: (request, response) => { 
+        return response.render('cadastro')
+    },
+
+    login: (request, response) => { 
+        return response.render('login')
+    },
+
+    confirmacao: (request, response) => { 
+        return response.render('confirmacaoCompra')
+    },
+
     create: async (req, res) => {
         let { nome } = req.body;
 

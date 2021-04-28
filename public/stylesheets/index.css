@@ -35,6 +35,13 @@
     margin-top: -2px;
 }
 
+.card a{
+    text-decoration: none;
+}
+
+.cardinfo a{
+    color: white;
+}
 
 .cardinfo p{
     font-size: 25px;

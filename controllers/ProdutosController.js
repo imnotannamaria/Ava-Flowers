@@ -7,6 +7,14 @@ const ProdutosController = {
         return res.json(produtos);
     },
 
+    carrinho: (request, response) => { 
+        return response.render('carrinho')
+    },
+
+    produto: (request, response) => { 
+        return response.render('produto')
+    },
+
     create: async(req,res)=>{
         let { nome,  valor, quantidadeEstoque,  categoria_id} = req.body;
         

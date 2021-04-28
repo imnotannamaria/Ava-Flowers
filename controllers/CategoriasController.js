@@ -5,7 +5,15 @@ const CategoriaController = {
         let categoria = await Categoria.findAll();
         return res.json(categoria);
     },
-
+    todasFlores: (request, response) => { 
+        return response.render('todasFlores')
+    },
+    buques: (request, response) => { 
+        return response.render('buques')
+    },
+    ocasioes: (request, response) => { 
+        return response.render('ocasioes')
+    },
     create: async(req,res) => {
         let{nome} = req.body;
         
