@@ -1,63 +1,74 @@
 const { Endereco, sequelize } = require('../models/');
 
 const enderecosController = {
-    index: async (req, res) => {
+  index: async (req, res) => {
     let enderecos = await Endereco.findAll();
     return res.json(enderecos);
-    },
+  },
 
-    create: async (req, res) => {
-        let { logradouro, cidade, estado, bairro, numero, complemento } = req.body;
+  create: async (req, res) => {
+    let {
+      logradouro,
+      cidade,
+      estado,
+      bairro,
+      numero,
+      complemento,
+      clientes_id,
+    } = req.body;
 
-        let novoEndereco = await Endereco.create({
-            logradouro,
-            cidade,
-            estado,
-            bairro,
-            numero,
-            complemento,
-        });
+    let novoEndereco = await Endereco.create({
+      logradouro,
+      cidade,
+      estado,
+      bairro,
+      numero,
+      complemento,
+      clientes_id,
+    });
 
-        return res.json(novoEndereco);
-    },
+    return res.json(novoEndereco);
+  },
 
-    update: async (req, res) => {
-        const { id } = req.params;
-        const {
-            logradouro,
-            cidade,
-            estado,
-            bairro,
-            numero,
-            complemento,
-        } = req.body;
+  update: async (req, res) => {
+    const { id } = req.params;
+    const {
+      logradouro,
+      cidade,
+      estado,
+      bairro,
+      numero,
+      complemento,
+      clientes_id,
+    } = req.body;
 
-        const enderecoUP = await Endereco.update(
-        {
-            logradouro,
-            cidade,
-            estado,
-            bairro,
-            numero,
-            complemento,
-        },
-        {
-            where: { id },
-        }
-        );
+    const enderecoUP = await Endereco.update(
+      {
+        logradouro,
+        cidade,
+        estado,
+        bairro,
+        numero,
+        complemento,
+        clientes_id,
+      },
+      {
+        where: { id },
+      }
+    );
 
-        return res.json(enderecoUP);
-    },
+    return res.json(enderecoUP);
+  },
 
-    delete: async (req, res) => {
-        const { id } = req.params;
+  delete: async (req, res) => {
+    const { id } = req.params;
 
-        const endereco = await Endereco.destroy({
-            where: { id },
-        });
+    const endereco = await Endereco.destroy({
+      where: { id },
+    });
 
-        return res.json(endereco);
-    },
+    return res.json(endereco);
+  },
 };
 
 module.exports = enderecosController;
