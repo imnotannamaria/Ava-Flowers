@@ -9,40 +9,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/Global.css">
-    <link rel="stylesheet" href="/stylesheets/Index.css">
+    <link rel="stylesheet" href="/stylesheets/cadastro-login-confirmacao.css">
     <title>Ava Flowers | Cadastro</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
 </head>
 <body>
     <header>
-        <div class="header-wrapper-top">
+        <div class="header2-wrapper-top">
             <a href="/">
-                <div class="logoHeader">
+                <div class="logoHeader2">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
             </a>
-            <div class="header-buscar">
-                <input type="text">
-                <img src="/images/icons/lupa.png" alt="">
-            </div>
+            
             <a href="/produtos/carrinho">
-                <div class="header-carrinho">
+                <div class="header-carrinho2">
                     <img src="/images/Carrinho.png" alt="">
                 </div>
             </a>
         </div>
         
-        <div class="header-wrapper-bot">
-            <a href="/categorias/todasFlores">Todas as Flores</a>
-            <a href="/categorias/buques">Buquês</a>
-            <a href="/categorias/ocasioes">Ocasiões especiais</a>
-            </ul>
-        </div>
     </header>
 
-    <h1>CADASTRO</h1>
-    <a href="/pagamentos/login">Login</a>
-    <a href="/pagamentos/confirmacao">Confirmação Compra</a>
+    
+        <div class="container">
+            <div class="row">
+                <div class="cadastro-wrapper col-md">
+                    <div class="cadastro">
+                        <div class="img-cadastro">
+                            <img src="/images/cadastroCover.png" alt="">
+                        </div>
+                        
+                        <div class="cadastro-form">
+                            <h1>Cadastre-se</h1>
+                
+                            <input type="text" placeholder="Nome completo: ">
+                            <input type="email" placeholder="Email: ">
+                            <input type="email" placeholder="Confirme seu email: ">
+                            <input type="password" placeholder="Senha: ">
+                            <input type="password" placeholder="Confirme sua senha: ">
+                            <div class="form-cadastro">
+                                <a class="btn-cadastro"href="/pagamentos/confirmacao">
+                                    Cadastra-se
+                                </a>
+                                
+                                <a class="link" href="/pagamentos/login">Não tem cadastro? </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
