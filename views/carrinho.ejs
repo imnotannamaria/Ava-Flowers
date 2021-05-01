@@ -66,9 +66,9 @@
                                             $60,00
                                         </div>
                                         <div class="add">
-                                            <button class="botao"><</button>
-                                                <span>1</span>
-                                            <button class="botao">></button>
+                                            <button id="buttonRemove1" class="botao"><</button>
+                                                <span  id="number1">1</span>
+                                            <button id="buttonAdd1" type="button" class="botao">></button>
                                         </div>
                                     </div>
                                 </div>
@@ -96,9 +96,9 @@
                                             $60,00
                                         </div>
                                         <div class="add">
-                                            <button class="botao"><</button>
-                                                <span>1</span>
-                                            <button class="botao">></button>
+                                            <button id="buttonRemove2" class="botao"><</button>
+                                                <span  id="number2">1</span>
+                                            <button id="buttonAdd2" type="button" class="botao">></button>
                                         </div>
                                     </div>
                                 </div>
@@ -126,9 +126,9 @@
                                             $60,00
                                         </div>
                                         <div class="add">
-                                            <button class="botao"><</button>
-                                                <span>1</span>
-                                            <button class="botao">></button>
+                                            <button id="buttonRemove3" class="botao"><</button>
+                                                <span  id="number3">1</span>
+                                            <button id="buttonAdd3" type="button" class="botao">></button>
                                         </div>
                                     </div>
                                 </div>
@@ -166,7 +166,80 @@
             <br>
         </div>
     </div>  
+
+    <script>
+        const number1 = document.querySelector("#number1");
+        const number2 = document.querySelector("#number2");
+        const number3 = document.querySelector("#number3");
+
+        var count1 = 1;
+        var count2 = 1;
+        var count3 = 1;
+
+        document.querySelector("#buttonAdd1").addEventListener('click', (evento) => {
+            count1++;
+            number1.innerText = count1; 
+            if(count1 > 10/* quantidade no escote*/){
+                alert("Não temos essa quantidade!");
+                count1 = 1;
+                number1.innerText = count1; 
+            }
+        });
+
+        document.querySelector("#buttonAdd2").addEventListener('click', (evento) => {
+            count2++;
+            number2.innerText = count2; 
+            if(count2 > 10/* quantidade no escote*/){
+                alert("Não temos essa quantidade!");
+                count2 = 1;
+                number2.innerText = count2; 
+            }
+        });
+
+        document.querySelector("#buttonAdd3").addEventListener('click', (evento) => {
+            count3++;
+            number3.innerText = count3; 
+            if(count3 > 10/* quantidade no escote*/){
+                alert("Não temos essa quantidade!");
+                count3 = 1;
+                number3.innerText = count3; 
+            }
+        });
+        
     
+        //REMOVER
+
+        document.querySelector("#buttonRemove1").addEventListener('click', (evento) => {
+            count1--;
+            number1.innerText = count1; 
+            if(count1 <= 0/* quantidade no escote*/){
+                alert("Selecione uma quantidade valida!");
+                count1 = 1;
+                number1.innerText = count1; 
+            }
+        })
+
+        document.querySelector("#buttonRemove2").addEventListener('click', (evento) => {
+            count2--;
+            number2.innerText = count2; 
+            if(count2 <= 0/* quantidade no escote*/){
+                alert("Selecione uma quantidade valida!");
+                count2 = 1;
+                number2.innerText = count2; 
+            }
+        })
+
+        document.querySelector("#buttonRemove3").addEventListener('click', (evento) => {
+            count3--;
+            number3.innerText = count3; 
+            if(count3 <= 0/* quantidade no escote*/){
+                alert("Selecione uma quantidade valida!");
+                count3 = 1;
+                number3.innerText = count3; 
+            }
+        })
+    </script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
