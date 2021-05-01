@@ -1,73 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/Global.css">
-    <link rel="stylesheet" href="/stylesheets/cadastro-login-confirmacao.css">
-    <link rel="stylesheet" href="/stylesheets/cadastro.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/Global.css" />
+    <link rel="stylesheet" href="/stylesheets/cadastro-login-confirmacao.css" />
+    <link rel="stylesheet" href="/stylesheets/cadastro.css" />
     <title>Ava Flowers | Cadastro</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header2-wrapper-top">
-            <a href="/">
-                <div class="logoHeader2">
-                    <img src="/images/LogoHeader.png" alt="">
-                </div>
-            </a>
-            
-            <a href="/produtos/carrinho">
-                <div class="header-carrinho2">
-                    <img src="/images/Carrinho.png" alt="">
-                </div>
-            </a>
-        </div>
-        
+      <div class="header2-wrapper-top">
+        <a href="/">
+          <div class="logoHeader2">
+            <img src="/images/LogoHeader.png" alt="" />
+          </div>
+        </a>
+
+        <a href="/produtos/carrinho">
+          <div class="header-carrinho2">
+            <img src="/images/Carrinho.png" alt="" />
+          </div>
+        </a>
+      </div>
     </header>
 
-    
-        <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <div class="form">
-                        <p>Cadastre-se</p>
-                        <form action="">
-                            <div class="nome-dados">
-                                <h3>Preencha os dados: </h3>
-                            </div>
-                            <input type="text" name="nome" placeholder="Nome completo:" id="">
-                            <input type="email" name="email" placeholder="Email: ">
-                            <input type="password" name="senha" placeholder="Senha: ">
-                            <input type="text" name="logradouro" placeholder="Logradouro:" id="">
-                            <input type="text" name="cidade" placeholder="Cidade: " id="">
-                            <input type="text" name="estado" placeholder="Estado: " id="">
-                            <div class="fifth">
-                                <input type="text" name="bairro" placeholder="Bairro: " id="">
-                                <span>AAAAA</span>
-                                <input type="text" name="numero" placeholder="Número: " id="">
-                            </div>
-                            <input type="text" name="complemento" placeholder="Complemento: " id="">
-                            <div class="botao-endereco">
-                                <button type="submit">Cadastre-se</button>
-                                <br>
-                                <a class="link" href="/clientes/login">Já tem cadastro? </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <div class="form">
+            <p>Cadastre-se</p>
+            <form action="/clientes" method="POST">
+              <div class="nome-dados">
+                <h3>Preencha os dados:</h3>
+              </div>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Nome completo:"
+                id=""
+              />
+              <input type="email" name="email" placeholder="Email: " />
+              <input type="password" name="senha" placeholder="Senha: " />
+              <input
+                type="text"
+                name="logradouro"
+                placeholder="Logradouro:"
+                id=""
+              />
+              <input type="text" name="cidade" placeholder="Cidade: " id="" />
+              <input type="text" name="estado" placeholder="Estado: " id="" />
+              <div class="fifth">
+                <input type="text" name="bairro" placeholder="Bairro: " id="" />
+                <span>AAAAA</span>
+                <input type="text" name="numero" placeholder="Número: " id="" />
+              </div>
+              <input
+                type="text"
+                name="complemento"
+                placeholder="Complemento: "
+                id=""
+              />
+              <div class="botao-endereco">
+                <button type="submit">Cadastre-se</button>
+                <br />
+                <a class="link" href="/clientes/login">Já tem cadastro? </a>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
