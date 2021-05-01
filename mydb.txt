@@ -52,8 +52,14 @@ CREATE TABLE `clientes` (
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` char(8) NOT NULL,
+  `logradouro` varchar(45) NOT NULL,
+  `cidade` varchar(45) NOT NULL,
+  `estado` varchar(45) NOT NULL,
+  `bairro` varchar(45) NOT NULL,
+  `numero` varchar(45) NOT NULL,
+  `complemento` varchar(45) DEFAULT 'Sem Complemento',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,40 +68,8 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'Anna Maria','Anna@hotmail.com','4215454'),(2,'Lorena','lorena@hotmail.com','56325412'),(3,'Vinicius','vini@hotmail.com','85412457'),(4,'Leda','leda@hotmail.com','96521458'),(5,'Elian','elian@hotmail.com','96541366'),(6,'Gabrielle','gabi@hotmail.com','98541547');
+INSERT INTO `clientes` VALUES (1,'Anna Maria','Anna@hotmail.com','4215454','','','','','',NULL),(2,'Lorena','lorena@hotmail.com','56325412','','','','','',NULL),(3,'Vinicius','vini@hotmail.com','85412457','','','','','',NULL),(4,'Leda','leda@hotmail.com','96521458','','','','','',NULL),(5,'Elian','elian@hotmail.com','96541366','','','','','',NULL),(6,'Gabrielle','gabi@hotmail.com','98541547','','','','','',NULL),(11,'Anna Maria','Anna@hotmail.com','4215454','rua triste','recife','PE','casa amarela','21','ao lado da padaria 2'),(12,'everton elias','matheus2131@hotmail.com','vini123','rua 15 d ejunho','Recife','PE','casa amarela','53','muro verde'),(13,'renato','renato@hotmail.com','vini123','rua 15 de junho','Recife','PE','casa amarela','53','b'),(14,'renato gabriel','gabriell@hotmail.com','vini123','rua 15 d ejunho','Recife','PE','casa amarela','53','b');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `endereco`
---
-
-DROP TABLE IF EXISTS `endereco`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `endereco` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `logradouro` varchar(45) NOT NULL,
-  `cidade` varchar(45) NOT NULL,
-  `estado` varchar(45) NOT NULL,
-  `bairro` varchar(45) NOT NULL,
-  `numero` varchar(45) NOT NULL,
-  `complemento` varchar(45) NOT NULL,
-  `clientes_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_endereco_clientes1_idx` (`clientes_id`),
-  CONSTRAINT `fk_endereco_clientes1` FOREIGN KEY (`clientes_id`) REFERENCES `clientes` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `endereco`
---
-
-LOCK TABLES `endereco` WRITE;
-/*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
-INSERT INTO `endereco` VALUES (1,'bela vista','vitória de santo antão','PE','Alto','105','perto do lava-jato',1),(2,'bela dina','recife','PE','centro','120','perto do resturante do bairro',2),(3,'avenida paulista','recife','PE','avenida 3','97','perto da praia',3),(4,'rua da alegria','caruaru','PE','avenida','42','perto do bar',4),(5,'rua da praça','jaboatão','PE','praça','654','perto do bar da tia',5),(6,'rua da tristeza','recife','PE','praça','22','perto do bar',6);
-/*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -250,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-30 15:52:16
+-- Dump completed on 2021-05-01 19:24:11

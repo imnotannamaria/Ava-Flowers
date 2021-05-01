@@ -1,81 +1,94 @@
 const { Cliente, sequelize } = require('../models/');
-const enderecosController = require('./EnderecosController');
 
 const clientesController = {
-	index: async (req, res) => {
-		let clientes = await Cliente.findAll();
-		return res.json(clientes);
-	},
-	auth: async (request, response) => { 
-        const {email, senha} = request.body;
+  index: async (req, res) => {
+    let clientes = await Cliente.findAll();
+    return res.json(clientes);
+  },
+  auth: async (request, response) => {
+    const { email, senha } = request.body;
 
-        const cliente = await cliente.findOne({ 
-            where: {
-                email
-            }
-        });
-        //se retornar true e for ele mesmo 
-        if(cliente && bcrypt.compareSync(senha, cliente.senha)){
-            request.session.clienteLogado = cliente;
-            return response.redirect('/clientes/confirmacao');
-        }else{
-            return response.redirect('/clientes/login');
-        }
-    },
-    cadastro: (request, response) => { 
-        return response.render('cadastro')
-    },
+    const cliente = await cliente.findOne({
+      where: {
+        email,
+      },
+    });
+    //se retornar true e for ele mesmo
+    if (cliente && bcrypt.compareSync(senha, cliente.senha)) {
+      request.session.clienteLogado = cliente;
+      return response.redirect('/clientes/confirmacao');
+    } else {
+      return response.redirect('/clientes/login');
+    }
+  },
+  cadastro: (request, response) => {
+    return response.render('cadastro');
+  },
 
-    login: (request, response) => { 
-        return response.render('login')
-    },
+  login: (request, response) => {
+    return response.render('login');
+  },
 
-    confirmacao: (request, response) => { 
-        return response.render('confirmacaoCompra')
-    },
-    endereco: (request, response) => { 
-        return response.render('endereco')
-    },
+  confirmacao: (request, response) => {
+    return response.render('confirmacaoCompra');
+  },
+
   create: async (req, res) => {
-    let { nome, email, senha, endereco_id } = req.body;
+    let {
+      nome,
+      email,
+      senha,
+      logradouro,
+      cidade,
+      estado,
+      bairro,
+      numero,
+      complemento,
+    } = req.body;
 
     let novoCliente = await Cliente.create({
       nome,
       email,
       senha,
+      logradouro,
+      cidade,
+      estado,
+      bairro,
+      numero,
+      complemento,
     });
 
-    return res.json(novoCliente);
+    return res.redirect('/clientes/confirmacao');
   },
 
   update: async (req, res) => {
     const { id } = req.params;
-    const { nome, email, senha } = req.body;
+    const {
+      nome,
+      email,
+      senha,
+      logradouro,
+      cidade,
+      estado,
+      bairro,
+      numero,
+      complemento,
+    } = req.body;
 
     const cliente = await Cliente.update(
       {
         nome,
         email,
         senha,
+        logradouro,
+        cidade,
+        estado,
+        bairro,
+        numero,
+        complemento,
       },
       {
         where: { id },
-      }
-    );
-
-    return res.json(cliente);
-  },
-
-  updateendereco: async (req, res) => {
-    const { id } = req.params;
-    const { endereco_id } = req.body;
-
-    const cliente = await Cliente.update(
-      {
-        endereco_id,
-      },
-      {
-        where: { idd },
       }
     );
 
