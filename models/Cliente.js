@@ -1,25 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
   // define(nomeModel, colunas, config)
-    const Cliente = sequelize.define(
-        'Cliente',
-        {
-        nome: DataTypes.STRING,
-        email: DataTypes.STRING,
-        senha: DataTypes.STRING,
-        endereco_id: DataTypes.INTEGER,
-        },
-        {
-        tableName: 'clientes',
-        timestamps: false,
-        }
-    );
+  const Cliente = sequelize.define(
+    'Cliente',
+    {
+      nome: DataTypes.STRING,
+      email: DataTypes.STRING,
+      senha: DataTypes.STRING,
+    },
+    {
+      tableName: 'clientes',
+      timestamps: false,
+    }
+  );
 
-    Cliente.associate = (models) => {
-        Cliente.hasMany(models.Endereco, {
-            as: 'enderecos',
-            foreignKey: 'id',
-        });
-    };
+  Cliente.associate = (models) => {
+    Cliente.belongsTo(models.Endereco, {
+      as: 'cadastrado', // alias da relação
+      through: 'enderecos', // tabela intermediária
+      foreignKey: 'id',
+      timestamps: false,
+    });
+  };
 
-    return Cliente;
+  return Cliente;
 };

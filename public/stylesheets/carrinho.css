@@ -107,6 +107,9 @@ h1{
 
 .botao-finalizar:hover{
     color: white;
+    text-decoration: none;
+    background-color: #8CAB7E;
+    transition: 1s;
 }
 
 @media only screen and (max-width: 1550px) {
