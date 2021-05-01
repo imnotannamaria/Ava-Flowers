@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const { Cliente, sequelize } = require('../models/');
 
 const clientesController = {
@@ -46,10 +47,12 @@ const clientesController = {
       complemento,
     } = req.body;
 
+    const senhaCrypt = bcrypt.hashSync(senha, 10);
+
     let novoCliente = await Cliente.create({
       nome,
       email,
-      senha,
+      senha: senhaCrypt,
       logradouro,
       cidade,
       estado,

@@ -46,17 +46,15 @@ module.exports = async (request, response, next) => {
             .status(400)
             .json({ error: 'Por favor informe a seu nome :(' });
         } else {
-          if (senha.length < 6 || senha.length > 12) {
+          if (senha.length < 6 || senha.length > 20) {
             response.status(400).json({
               error: 'Senha inválida, sua senha deve ter de 6 a 12 digitos.',
             });
           } else {
             if (!logradouro || !cidade || !estado || !bairro || !numero) {
-              response
-                .status(400)
-                .json({
-                  error: 'Todos os campos obrigatórios devem ser preenchidos',
-                });
+              response.status(400).json({
+                error: 'Todos os campos obrigatórios devem ser preenchidos',
+              });
               return;
             } else {
               if (logradouro.length < 5) {
