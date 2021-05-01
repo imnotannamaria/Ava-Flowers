@@ -167,6 +167,38 @@
         </div>
     </div>  
 
+    <div id="modal2" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" style="color: red; font-weight: bold;">ATENÇÃO</h5>
+                </div>
+                <div class="modal-body">
+                <p>Selecione uma quantidade válida do produto!</p>
+                </div>
+                <div class="modal-footer">
+                <button onclick="fecharBotao()" type="button" class="btn btn-success">Continuar comprando</button>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div id="modal1" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" style="color: red; font-weight: bold;">ATENÇÃO</h5>
+            </div>
+            <div class="modal-body">
+            <p>Infelizmente não temos essa quantidade de produto disponível. :(</p>
+            </div>
+            <div class="modal-footer">
+            <button onclick="fecharBotao()" type="button" class="btn btn-success">Continuar comprando</button>
+            </div>
+        </div>
+        </div>
+</div>
+
     <script>
         const number1 = document.querySelector("#number1");
         const number2 = document.querySelector("#number2");
@@ -180,7 +212,8 @@
             count1++;
             number1.innerText = count1; 
             if(count1 > 10/* quantidade no escote*/){
-                alert("Não temos essa quantidade!");
+                let modal = document.getElementById('modal1');
+                modal.style.display = "block";
                 count1 = 1;
                 number1.innerText = count1; 
             }
@@ -190,7 +223,8 @@
             count2++;
             number2.innerText = count2; 
             if(count2 > 10/* quantidade no escote*/){
-                alert("Não temos essa quantidade!");
+                let modal = document.getElementById('modal1');
+                modal.style.display = "block";
                 count2 = 1;
                 number2.innerText = count2; 
             }
@@ -200,7 +234,8 @@
             count3++;
             number3.innerText = count3; 
             if(count3 > 10/* quantidade no escote*/){
-                alert("Não temos essa quantidade!");
+                let modal = document.getElementById('modal1');
+                modal.style.display = "block";
                 count3 = 1;
                 number3.innerText = count3; 
             }
@@ -213,7 +248,8 @@
             count1--;
             number1.innerText = count1; 
             if(count1 <= 0/* quantidade no escote*/){
-                alert("Selecione uma quantidade valida!");
+                let modal = document.getElementById('modal2');
+                modal.style.display = "block";
                 count1 = 1;
                 number1.innerText = count1; 
             }
@@ -223,7 +259,8 @@
             count2--;
             number2.innerText = count2; 
             if(count2 <= 0/* quantidade no escote*/){
-                alert("Selecione uma quantidade valida!");
+                let modal = document.getElementById('modal2');
+                modal.style.display = "block";
                 count2 = 1;
                 number2.innerText = count2; 
             }
@@ -233,11 +270,20 @@
             count3--;
             number3.innerText = count3; 
             if(count3 <= 0/* quantidade no escote*/){
-                alert("Selecione uma quantidade valida!");
+                let modal = document.getElementById('modal2');
+                modal.style.display = "block";
                 count3 = 1;
                 number3.innerText = count3; 
             }
         })
+
+        function fecharBotao(){
+            let modal1 = document.getElementById('modal1');
+            let modal2 = document.getElementById('modal2');
+
+            modal1.style.display = "none";
+            modal2.style.display = "none";
+        }
     </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

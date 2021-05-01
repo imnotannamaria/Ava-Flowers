@@ -2,8 +2,8 @@ const { Produto, sequelize } = require('../models');
 
 const ProdutosController = {
   index: async (req, res) => {
-    let produtos = await Produto.findAll();
-    return res.json(produtos);
+    const produtos = await Produto.findAll();
+    return res.json(produtos);    
   },
 
   carrinho: (request, response) => {
@@ -60,4 +60,5 @@ const ProdutosController = {
     return res.json(produto);
   },
 };
+
 module.exports = ProdutosController;
