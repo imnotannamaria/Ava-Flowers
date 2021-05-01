@@ -5,12 +5,6 @@ const ValidarPagamento = require('../middlewares/ValidarPagamento');
 
 router.get('/', pagamentoController.index);
 
-router.get('/cadastro', pagamentoController.cadastro);
-
-router.get('/login', pagamentoController.login);
-
-router.get('/confirmacao', pagamentoController.confirmacao);
-
 router.post('/', ValidarPagamento, pagamentoController.create);
 
 router.put('/:id', pagamentoController.update);

@@ -1,0 +1,136 @@
+.carrinho{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.titulo{
+    margin-top: 3rem;
+}
+
+h1{
+    color: #FE934E;
+    font-weight: bold;
+}
+
+.produto{
+    display: flex;
+    background-color: #EE9C63;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.produto .produto-img{
+    border-radius: 20px 20px 20px 20px;
+}
+
+.preco-add-excluir{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.preco-add-excluir-wrapper{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nome h3{
+    color: white;
+    font-weight: bold;
+}
+
+.preco-add{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.preco{
+    background-color: #DE9B6C;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+.add{
+    background-color: #DE9B6C;
+    color: white;
+}
+
+.add button{
+    background-color: #DE9B6C;
+    color: white;
+    border: 1px solid #E5BA9C;
+    padding: 10px;
+}
+
+.add span{
+    padding: 10px;
+}
+
+
+.excluir{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.preco-info{
+    font-size: 40px;
+    margin-top: 1rem;
+}
+
+.brown{
+    color: #CD8655;
+}
+
+.orange{
+    color: #FE934E;
+    font-weight: bold;
+}
+
+.botao-finalizar{
+    background-color: #9EC38E;
+    color: white;
+    padding: 25px 25px;
+    margin-bottom: 5rem;
+    border-radius: 125px;
+}
+
+.botao-finalizar:hover{
+    color: white;
+}
+
+@media only screen and (max-width: 1550px) {
+    .preco-add-excluir-wrapper{
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 1310px) {
+    .preco-add-excluir-wrapper{
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .produto{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .preco-add-excluir{
+        padding: 30px;
+    }
+
+}

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/Global.css">
     <link rel="stylesheet" href="/stylesheets/Index.css">
+    <link rel="stylesheet" href="/stylesheets/carrinho.css">
+
     <title>Ava Flowers | Carrinho</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
 </head>
@@ -40,8 +42,130 @@
         </div>
     </header>
 
-    <h1>CARRINHO</h1>
-    <a href="/pagamentos/cadastro">FINALIZAR COMPRA</a>
+
+    <div class="carrinho">
+        <div class="titulo">
+            <h1>Seus</h1>
+            <h1>Produtos</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="produto">
+                        <img class="produto-img" src="/images/buques/BuqueRosas.png" alt="">
+                        <div class="descricao">
+                            
+                            <div class="preco-add-excluir">
+                                <div class="preco-add-excluir-wrapper">
+                                    <div class="nome">
+                                        <h3>Buques rosas coloridas</h3>
+                                    </div>
+                                    <div class="preco-add">
+                                        <div class="preco">
+                                            $60,00
+                                        </div>
+                                        <div class="add">
+                                            <button class="botao"><</button>
+                                                <span>1</span>
+                                            <button class="botao">></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <a href="">
+                                    <div class="excluir">
+                                        <img src="/images/icons/trash.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <img class="produto-img" src="/images/todasFlores/Lirios.png" alt="">
+                        <div class="descricao">
+                            
+                            <div class="preco-add-excluir">
+                                <div class="preco-add-excluir-wrapper">
+                                    <div class="nome">
+                                        <h3>Lírios</h3>
+                                    </div>
+                                    <div class="preco-add">
+                                        <div class="preco">
+                                            $60,00
+                                        </div>
+                                        <div class="add">
+                                            <button class="botao"><</button>
+                                                <span>1</span>
+                                            <button class="botao">></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <a href="">
+                                    <div class="excluir">
+                                        <img src="/images/icons/trash.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <img  class="produto-img" src="/images/ocasiões/DiaDosNamorados.png" alt="">
+                        <div class="descricao">
+                            
+                            <div class="preco-add-excluir">
+                                <div class="preco-add-excluir-wrapper">
+                                    <div class="nome">
+                                        <h3>Dia dos namorados</h3>
+                                    </div>
+                                    <div class="preco-add">
+                                        <div class="preco">
+                                            $60,00
+                                        </div>
+                                        <div class="add">
+                                            <button class="botao"><</button>
+                                                <span>1</span>
+                                            <button class="botao">></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <a href="">
+                                    <div class="excluir">
+                                        <img src="/images/icons/trash.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        <br> 
+        <hr>
+        <br>
+        <div class="preco-info">
+            <h1>Total: </h1>
+            <span class="brown">$180,00 +</span>
+            <br>
+            <span class="brown"> ̶$̶5̶0̶,̶0̶0̶ (frete grátis)</span>
+            <br>
+            <span class="brown">------------------------</span>
+            <br>
+            <span class="orange">$180,00</span>
+            <br>
+            <br>
+            <a class="botao-finalizar" href="/clientes/cadastro">FINALIZAR COMPRA</a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>  
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

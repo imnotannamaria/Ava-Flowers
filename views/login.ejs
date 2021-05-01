@@ -46,16 +46,17 @@
                         
                         <div class="cadastro-form">
                             <h1>Login</h1>
-        
-                            <input type="email" placeholder="Email: ">
-                            <input type="password" placeholder="Senha: ">
+                            <form action="/clientes/login" method="POST">
+                                <input type="email" placeholder="Email: ">
+                                <input type="password" placeholder="Senha: ">
+                            </form>
     
                             <div class="form-cadastro">
                                 <a class="btn-cadastro"href="/pagamentos/confirmacao">
                                     Entrar
                                 </a>
                                 
-                                <a class="link" href="/pagamentos/cadastro">Já tem cadastro? </a>
+                                <a class="link" href="/clientes/cadastro">Não tem cadastro? </a>
                             </div>
                         </div>
                     </div>
