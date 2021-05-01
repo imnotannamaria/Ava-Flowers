@@ -1,0 +1,97 @@
+.container-produto {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  margin: 68px;
+  justify-content: center;
+}
+
+.imagem {
+  width: 50%;
+  position: static;
+  background: #cd8655;
+  border-top-left-radius: 50.5px;
+}
+.info {
+  justify-content: space-evenly;
+  display: flex;
+  width: 60%;
+  padding: 40px;
+  background: #cd8655;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.nome {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+}
+.informacoes {
+  align-self: center;
+  padding: 20px;
+  display: flex;
+  font-size: 30px;
+  color: #ffffff;
+}
+.preco {
+  padding: 10px, 5px;
+  align-self: center;
+  color: #ffffff;
+  font-size: 36px;
+  border-radius: 30px;
+  background-color: #d79a71;
+}
+
+.comprar {
+  color: #ffffff;
+  font-size: 36px;
+  border-radius: 30px;
+  background-color: #9ec38e;
+  border: #d79a71;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+.container-cuidados {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  padding-left: 180px;
+  margin: 20px;
+}
+.titulo {
+  color: #cd8655;
+}
+.topico {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.titulo {
+  align-self: center;
+  font-size: 48px;
+  padding-bottom: 90px;
+}
+.title {
+  align-self: center;
+  justify-content: space-between;
+  color: #cd8655;
+  font-size: 36px;
+}
+.texto {
+  flex-wrap: wrap;
+  color: #929292;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+/*---------------------------------*/
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+.btn .comprar {
+  width: 50%;
+  border-radius: 50px;
+}
