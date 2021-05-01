@@ -22,7 +22,7 @@ const clientesController = {
             return response.redirect('/clientes/login');
         }
     },
-	cadastro: (request, response) => { 
+    cadastro: (request, response) => { 
         return response.render('cadastro')
     },
 

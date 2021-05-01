@@ -45,11 +45,12 @@
 .cadastro-form h1{
     font-size: 40px;
     color: var(--orange);
+    text-align: center;
 }
 
 .cadastro-form input{
     border: 0;
-    width: 80%;
+    width: 100%;
     height: 50px;
     background-color: #ECECEC;
     color: #A9A9A9;
@@ -60,7 +61,7 @@
 
 .form-cadastro{
     margin-top: 30px;
-    width: 80%;
+    width: 99%;
     display: flex;
     justify-content: space-between;
 }
@@ -70,6 +71,7 @@
     background-color: var(--green);
     padding: 10px 20px;
     border-radius: 50px;
+    border: 0;
 }
 
 .btn-cadastro:hover{
@@ -82,6 +84,7 @@
 .link{
     color: #A9A9A9;
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .link:hover{
