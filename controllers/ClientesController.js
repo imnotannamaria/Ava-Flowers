@@ -33,6 +33,9 @@ const clientesController = {
     confirmacao: (request, response) => { 
         return response.render('confirmacaoCompra')
     },
+    endereco: (request, response) => { 
+        return response.render('endereco')
+    },
   create: async (req, res) => {
     let { nome, email, senha, endereco_id } = req.body;
 

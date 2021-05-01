@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/Global.css">
     <link rel="stylesheet" href="/stylesheets/cadastro-login-confirmacao.css">
-    <title>Ava Flowers | Cadastro</title>
+    <link rel="stylesheet" href="/stylesheets/endereco.css">
+    <title>Ava Flowers | Endereço</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
 </head>
 <body>
@@ -34,26 +35,28 @@
     
         <div class="container">
             <div class="row">
-                <div class="cadastro-wrapper col-md">
-                    <div class="cadastro">
-                        <div class="img-cadastro">
-                            <img src="/images/cadastroCover.png" alt="">
-                        </div>
-                        
-                        <div class="cadastro-form">
-                            <h1>Cadastre-se</h1>
-                            <form action="/clientes" method="POST">
-                                <input type="text" name="nome" placeholder="Nome completo: ">
-                                <input type="email" name="email" placeholder="Email: ">
-                                <input type="password" name="senha" placeholder="Senha: ">
-                                
-                                <div class="form-cadastro">
-                                    <button class="btn-cadastro" type="submit">Proxima epata</button>
-                                    <a class="link" href="/clientes/login">Já tem cadastro? </a>
-                                </div>
-                            </form>
-                            
-                        </div>
+                <div class="col-md">
+                    <div class="form">
+                        <h1>Endereço</h1>
+                        <form action="">
+                            <div class="nome-dados">
+                                <h3>Preencha os dados: </h3>
+                            </div>
+                            <input type="text" name="logradouro" placeholder="Logradouro:" id="">
+                            <input type="text" name="logradouro" placeholder="Cidade: " id="">
+                            <input type="text" name="logradouro" placeholder="Bairro: " id="">
+                            <div class="fifth">
+                                <input type="text" name="logradouro" placeholder="Número: " id="">
+                                <span>AAAAA</span>
+                                <input type="text" name="logradouro" placeholder="Estado: " id="">
+                            </div>
+                            <input type="text" name="logradouro" placeholder="Complemento: " id="">
+                            <div class="botao-endereco">
+                                <button type="submit">Cadastre-se</button>
+                                <br>
+                                <a class="link" href="/clientes/login">Já tem cadastro? </a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

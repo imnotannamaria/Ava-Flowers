@@ -1,0 +1,70 @@
+.form{
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    color: #CD8655;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+form{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    box-shadow: 0 0 1em rgb(34, 33, 29);
+    padding: 50px;
+}
+
+.nome-dados{
+    color: #CD8655;
+    width: 80%;
+    margin: 40px auto;
+}
+
+input{
+    border: 0;
+    width: 80%;
+    margin: 20px auto;
+    height: 50px;
+    background-color: #ECECEC;
+    color: #A9A9A9;
+    border-radius: 160px;
+    padding-left: 20px;
+}
+
+.fifth{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fifth span{
+    opacity: 0;
+}
+
+.botao-endereco{
+    margin: 30px auto;
+}
+
+.botao-endereco button{
+    color: white;
+    background-color: var(--green);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 0;
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+
+.botao-endereco button:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #82a175;
+    transition: 1s;
+}
