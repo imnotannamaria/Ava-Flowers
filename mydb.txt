@@ -36,7 +36,7 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
-INSERT INTO `categoria` VALUES (19,'Flores'),(21,'Ocasiões'),(20,'Todas as flores');
+INSERT INTO `categoria` VALUES (19,'Flores'),(21,'Ocasiôes'),(20,'Todas as Flores');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,11 +52,8 @@ CREATE TABLE `clientes` (
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` char(8) NOT NULL,
-  `endereco_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_clientes_endereço1_idx` (`endereco_id`),
-  CONSTRAINT `fk_clientes_endereço1` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +62,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (4,'Anna Maria','Vitória de Santo Antão','40028922',7),(5,'Leda','Recife','10281212',8),(6,'Vinicius','Recife','01826187',9),(7,'Lorena','Recife','1927152',11),(8,'Gabrielle','Recife','4918223',12),(9,'Lorena','Recife','1927223',13);
+INSERT INTO `clientes` VALUES (1,'Anna Maria','Anna@hotmail.com','4215454'),(2,'Lorena','lorena@hotmail.com','56325412'),(3,'Vinicius','vini@hotmail.com','85412457'),(4,'Leda','leda@hotmail.com','96521458'),(5,'Elian','elian@hotmail.com','96541366'),(6,'Gabrielle','gabi@hotmail.com','98541547');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,8 +81,11 @@ CREATE TABLE `endereco` (
   `bairro` varchar(45) NOT NULL,
   `numero` varchar(45) NOT NULL,
   `complemento` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  `clientes_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_endereco_clientes1_idx` (`clientes_id`),
+  CONSTRAINT `fk_endereco_clientes1` FOREIGN KEY (`clientes_id`) REFERENCES `clientes` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `endereco` (
 
 LOCK TABLES `endereco` WRITE;
 /*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
-INSERT INTO `endereco` VALUES (7,'Bela vista','Vitória de Santo Antão','PE','Alto','105','Perto do lava-jato'),(8,'Bela dona','Recife','PE','Centro','120','Perto do restaurante do bairro'),(9,'Avenida paulista','Recife','PE','Avenida','97','Perto da praia'),(11,'Rua da alegria','Caruaru','PE','Avenida','42','Perto do bar'),(12,'Rua da praça','Jaboatão','PE','Praça','654','Perto do bar da Tia'),(13,'Rua da tristeza','Recife','PE','Praça','22','Perto do bar');
+INSERT INTO `endereco` VALUES (1,'bela vista','vitória de santo antão','PE','Alto','105','perto do lava-jato',1),(2,'bela dina','recife','PE','centro','120','perto do resturante do bairro',2),(3,'avenida paulista','recife','PE','avenida 3','97','perto da praia',3),(4,'rua da alegria','caruaru','PE','avenida','42','perto do bar',4),(5,'rua da praça','jaboatão','PE','praça','654','perto do bar da tia',5),(6,'rua da tristeza','recife','PE','praça','22','perto do bar',6);
 /*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,7 +118,7 @@ CREATE TABLE `pagamentos` (
 
 LOCK TABLES `pagamentos` WRITE;
 /*!40000 ALTER TABLE `pagamentos` DISABLE KEYS */;
-INSERT INTO `pagamentos` VALUES (2,'Cartão de crédito'),(4,'Cartão de débito'),(5,'Boleto'),(6,'Pix');
+INSERT INTO `pagamentos` VALUES (1,'cartão de crédito'),(2,'cartão de débito'),(3,'boleto'),(4,'pix');
 /*!40000 ALTER TABLE `pagamentos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +148,7 @@ CREATE TABLE `pedido` (
 
 LOCK TABLES `pedido` WRITE;
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
-INSERT INTO `pedido` VALUES (2,2,NULL,12),(3,3,NULL,13),(4,4,NULL,16);
+INSERT INTO `pedido` VALUES (1,2,40,12),(2,3,21,13),(3,4,10,16);
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,6 +165,7 @@ CREATE TABLE `produtos` (
   `valor` double NOT NULL,
   `quantidadeEstoque` int NOT NULL,
   `categoria_id` int NOT NULL,
+  `descricao` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_produtos_categoria1_idx` (`categoria_id`),
   CONSTRAINT `fk_produtos_categoria1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
@@ -177,7 +178,7 @@ CREATE TABLE `produtos` (
 
 LOCK TABLES `produtos` WRITE;
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` VALUES (12,'Girassol',30,100,19),(13,'Cacto',20,50,19),(14,'Suculeta',50,20,20),(15,'Rosas',10,27,20),(16,'Dia das Mães',100,22,21),(17,'Dia da Mulher',150,59,21);
+INSERT INTO `produtos` VALUES (12,'Girassol',30,100,19,'null'),(13,'Cacto',20,50,19,'null'),(14,'Suculenta',50,20,20,'null'),(15,'Rosas',10,27,20,'null'),(16,'Dia das Mães',100,22,21,'null'),(17,'Dia da Mulher',150,59,21,'null');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,7 +203,7 @@ CREATE TABLE `status` (
 
 LOCK TABLES `status` WRITE;
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
-INSERT INTO `status` VALUES (6,'Em rota'),(7,'Entregue'),(5,'Pago');
+INSERT INTO `status` VALUES (5,'Em rota'),(6,'Entregue'),(7,'Pago');
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -236,7 +237,7 @@ CREATE TABLE `venda` (
 
 LOCK TABLES `venda` WRITE;
 /*!40000 ALTER TABLE `venda` DISABLE KEYS */;
-INSERT INTO `venda` VALUES (2,50,'2021-04-23',4,6,2),(3,60,'2021-04-22',5,7,4),(4,70,'2021-04-21',6,5,5);
+INSERT INTO `venda` VALUES (2,50,'2021-04-23',4,6,2),(3,60,'2021-04-23',5,7,4),(4,70,'2021-04-23',6,5,5);
 /*!40000 ALTER TABLE `venda` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -249,4 +250,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-23 11:54:11
+-- Dump completed on 2021-04-30 15:52:16
