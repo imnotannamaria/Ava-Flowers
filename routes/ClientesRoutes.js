@@ -13,8 +13,6 @@ router.post('/login', clientesController.auth);
 
 router.get('/confirmacao', clientesController.confirmacao);
 
-router.get('/endereco', clientesController.endereco);
-
 router.post('/', validarCadastro, clientesController.create);
 
 router.put('/:id', clientesController.update);

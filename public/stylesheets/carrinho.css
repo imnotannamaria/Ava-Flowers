@@ -112,6 +112,14 @@ h1{
     transition: 1s;
 }
 
+#modal1{
+    display: none;
+}
+
+#modal2{
+    display: none;
+}
+
 @media only screen and (max-width: 1550px) {
     .preco-add-excluir-wrapper{
         width: 700px;

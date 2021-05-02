@@ -6,21 +6,18 @@ module.exports = (sequelize, DataTypes) => {
       nome: DataTypes.STRING,
       email: DataTypes.STRING,
       senha: DataTypes.STRING,
+      logradouro: DataTypes.STRING,
+      cidade: DataTypes.STRING,
+      estado: DataTypes.STRING,
+      bairro: DataTypes.STRING,
+      numero: DataTypes.STRING,
+      complemento: DataTypes.STRING,
     },
     {
       tableName: 'clientes',
       timestamps: false,
     }
   );
-
-  Cliente.associate = (models) => {
-    Cliente.belongsTo(models.Endereco, {
-      as: 'cadastrado', // alias da relação
-      through: 'enderecos', // tabela intermediária
-      foreignKey: 'id',
-      timestamps: false,
-    });
-  };
 
   return Cliente;
 };
