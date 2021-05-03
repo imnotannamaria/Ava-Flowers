@@ -140,11 +140,11 @@ CREATE TABLE `produtos` (
   `quantidadeEstoque` int NOT NULL,
   `categoria_id` int NOT NULL,
   `descricao` varchar(1000) NOT NULL,
-  `img` varchar(200) NOT NULL,
+  `img` varchar(300) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_produtos_categoria1_idx` (`categoria_id`),
   CONSTRAINT `fk_produtos_categoria1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +153,7 @@ CREATE TABLE `produtos` (
 
 LOCK TABLES `produtos` WRITE;
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` VALUES (12,'Girassol',30,100,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1810-0.jpg'),(13,'Cacto',20,50,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-3990-0.jpg'),(14,'Suculenta',50,20,20,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5305-1.jpg'),(15,'Rosas',10,27,20,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5693-0.jpg'),(16,'Dia das Mães',100,22,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5694-0.jpg'),(17,'Dia da Mulher',150,59,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1092-2.jpg');
+INSERT INTO `produtos` VALUES (12,'Girassol',30,100,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-4588-0.jpg'),(13,'Cacto',20,50,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1811-0.jpg'),(14,'Suculenta',50,20,20,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5149-0.jpg'),(15,'Rosas',10,27,20,'null','https://www.jardinetmaison.fr/avis/sites/default/files/ImgBoutique/1703-rosier-botero-meiafone.jpg'),(16,'Dia das Mães',100,22,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5694-0.jpg'),(17,'Dia da Mulher',150,59,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5062-1.jpg'),(18,'Crisantemo',29,40,20,'null','https://tropicalestufas.com.br/wp-content/uploads/2020/06/crisantemos-de-cores.jpg'),(19,'Hortensia',100,10,20,'null','https://www.artisanduvegetal-vichy-st-yorre.fr/docs/1/PlanteDuMois/hydrangea-purple-24662991920.jpg'),(20,'Jasmim',90,14,20,'null','https://s2.glbimg.com/v4kFs_1IYC-FYNsDGpebfjlT8k0=/e.glbimg.com/og/ed/f/original/2020/06/23/jasmim-manga-plumeria-rubra.jpeg'),(21,'Lirios',54,90,20,'null','https://www.floresonline.com.br/media/catalog/product/b/a/baixa-2740-1.jpg'),(22,'Margarida',66,23,20,'null','https://pbs.twimg.com/media/Dnla2wdWsAEmEsy.jpg:large'),(23,'Tulipa',36,11,20,'null','https://mocah.org/uploads/posts/390143-4k-wallpaper.jpg'),(24,'Violeta',36,11,20,'null','https://odia.ig.com.br/_midias/jpg/2020/10/16/violeta1-20253508.jpg'),(25,'Aniversário',55,14,21,'null','https://www.floresonline.com.br/media/ImagensMobileProduto/b/a/baixa-1810-0.jpg'),(26,'Outono',34,12,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5649-1.jpg'),(27,'Casamento',89,44,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1105-1.jpg'),(28,'Dia dos namorados',77,43,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5635-1.jpg'),(29,'Dia Mães 2.0',66,32,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5672-0.jpg'),(30,'Dia das Mulher',66,32,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-05768_1.jpg'),(31,'Enterro',39,23,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-05812_1.jpg'),(32,'Casa nova',55,55,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1640-0.jpg'),(33,'Casamento',76,37,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1066-0.jpg'),(34,'Anos de casado',100,44,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1167-2.jpg'),(35,'Buquê Colorido',121,20,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5074-1.jpg'),(36,'Buquê Rosinha',155,21,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-2964-1.jpg'),(37,'Buquê Branco',77,1,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1141-1.jpg'),(38,'Buquê com tulipas',102,15,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-4581-0.jpg'),(39,'Buquê Roxo',123,44,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-05772_1.jpg'),(40,'Buquê Rosas coloridas',123,44,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1135-2.jpg'),(41,'Buquê Degradê',123,44,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-2648-0.jpg'),(42,'Buquê Maria',123,44,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-2710-0.jpg'),(43,'Buquê Flores rosadas',138,43,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-3001-0.jpg'),(44,'Buquê Girassóis',210,123,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-4565-0.jpg');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -225,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-03 14:18:02
+-- Dump completed on 2021-05-03 15:28:27
