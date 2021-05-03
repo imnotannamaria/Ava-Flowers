@@ -51,7 +51,7 @@ CREATE TABLE `clientes` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` char(8) NOT NULL,
+  `senha` longtext NOT NULL,
   `logradouro` varchar(45) NOT NULL,
   `cidade` varchar(45) NOT NULL,
   `estado` varchar(45) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE `clientes` (
   `numero` varchar(45) NOT NULL,
   `complemento` varchar(45) DEFAULT 'Sem Complemento',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'Anna Maria','Anna@hotmail.com','4215454','','','','','',NULL),(2,'Lorena','lorena@hotmail.com','56325412','','','','','',NULL),(3,'Vinicius','vini@hotmail.com','85412457','','','','','',NULL),(4,'Leda','leda@hotmail.com','96521458','','','','','',NULL),(5,'Elian','elian@hotmail.com','96541366','','','','','',NULL),(6,'Gabrielle','gabi@hotmail.com','98541547','','','','','',NULL),(11,'Anna Maria','Anna@hotmail.com','4215454','rua triste','recife','PE','casa amarela','21','ao lado da padaria 2'),(12,'everton elias','matheus2131@hotmail.com','vini123','rua 15 d ejunho','Recife','PE','casa amarela','53','muro verde'),(13,'renato','renato@hotmail.com','vini123','rua 15 de junho','Recife','PE','casa amarela','53','b'),(14,'renato gabriel','gabriell@hotmail.com','vini123','rua 15 d ejunho','Recife','PE','casa amarela','53','b');
+INSERT INTO `clientes` VALUES (1,'Anna Maria','Anna@hotmail.com','4215454','','','','','',NULL),(2,'Lorena','lorena@hotmail.com','56325412','','','','','',NULL),(3,'Vinicius','vini@hotmail.com','85412457','','','','','',NULL),(4,'Leda','leda@hotmail.com','96521458','','','','','',NULL),(5,'Elian','elian@hotmail.com','96541366','','','','','',NULL),(6,'Gabrielle','gabi@hotmail.com','98541547','','','','','',NULL),(11,'Anna Maria','Anna@hotmail.com','4215454','rua triste','recife','PE','casa amarela','21','ao lado da padaria 2'),(12,'everton elias','matheus2131@hotmail.com','vini123','rua 15 d ejunho','Recife','PE','casa amarela','53','muro verde'),(13,'renato','renato@hotmail.com','vini123','rua 15 de junho','Recife','PE','casa amarela','53','b'),(14,'renato gabriel','gabriell@hotmail.com','vini123','rua 15 d ejunho','Recife','PE','casa amarela','53','b'),(15,'gabriel medeiros','gg@hotmail.com','852914','rua 15 de junho','Recife','PE','casa amarela','53','b'),(16,'gabriel medeiros','gg@hotmail.com','vini123','rua 15 de junho','Recife','PE','casa amarela','53','b'),(17,'SASASASA','anStonio@hotmail.com','$2a$10$NLLw7TZ9RTEiqIMt7O4Viu8Kgy0mTxRQsvoxdzuWQzd9i7EvXYLd.','rua 15 d ejunho','Recife','PE','casa amarela','53','b');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,6 +140,7 @@ CREATE TABLE `produtos` (
   `quantidadeEstoque` int NOT NULL,
   `categoria_id` int NOT NULL,
   `descricao` varchar(1000) NOT NULL,
+  `img` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_produtos_categoria1_idx` (`categoria_id`),
   CONSTRAINT `fk_produtos_categoria1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
@@ -152,7 +153,7 @@ CREATE TABLE `produtos` (
 
 LOCK TABLES `produtos` WRITE;
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` VALUES (12,'Girassol',30,100,19,'null'),(13,'Cacto',20,50,19,'null'),(14,'Suculenta',50,20,20,'null'),(15,'Rosas',10,27,20,'null'),(16,'Dia das Mães',100,22,21,'null'),(17,'Dia da Mulher',150,59,21,'null');
+INSERT INTO `produtos` VALUES (12,'Girassol',30,100,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1810-0.jpg'),(13,'Cacto',20,50,19,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-3990-0.jpg'),(14,'Suculenta',50,20,20,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5305-1.jpg'),(15,'Rosas',10,27,20,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5693-0.jpg'),(16,'Dia das Mães',100,22,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-5694-0.jpg'),(17,'Dia da Mulher',150,59,21,'null','https://www.floresonline.com.br/media/catalog/product/a/l/alta-1092-2.jpg');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -224,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-01 19:24:11
+-- Dump completed on 2021-05-03 14:18:02

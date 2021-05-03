@@ -16,7 +16,6 @@
 /* SECTION MAIS VENDIDOS*/
 /* ============================================================================================= */
 
-
 .mais-vendidias {
   margin-top: 200px;
 }
@@ -79,6 +78,14 @@
   justify-content: center;
   cursor: pointer;
   margin-right: 2rem;
+}
+
+.img-principal {
+  /* background-image: url('../img/publication_example.jpg'); */
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
 }
 
 @media only screen and (max-width: 620px) {

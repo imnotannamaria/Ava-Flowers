@@ -3,7 +3,7 @@ const { Produto, sequelize } = require('../models');
 const ProdutosController = {
   index: async (req, res) => {
     const produtos = await Produto.findAll();
-    return res.json(produtos);    
+    return res.json(produtos);
   },
 
   carrinho: (request, response) => {
@@ -100,7 +100,14 @@ const ProdutosController = {
   //----------------------- fim exibição produtos-------------------------------
 
   create: async (req, res) => {
-    let { nome, valor, quantidadeEstoque, categoria_id, descricao } = req.body;
+    let {
+      nome,
+      valor,
+      quantidadeEstoque,
+      categoria_id,
+      descricao,
+      img,
+    } = req.body;
 
     let novoProduto = await Produto.create({
       nome,
@@ -108,6 +115,7 @@ const ProdutosController = {
       quantidadeEstoque,
       categoria_id,
       descricao,
+      img,
     });
     return res.json(novoProduto);
   },
@@ -120,6 +128,7 @@ const ProdutosController = {
       quantidadeEstoque,
       categoria_id,
       descricao,
+      img,
     } = req.body;
     const produto = await Produto.update(
       {
@@ -128,6 +137,7 @@ const ProdutosController = {
         quantidadeEstoque,
         categoria_id,
         descricao,
+        img,
       },
       {
         where: { id },
