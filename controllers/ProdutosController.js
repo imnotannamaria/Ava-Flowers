@@ -17,7 +17,7 @@ const ProdutosController = {
     let index = produtosCarrinho.findIndex(findProduto, id);
 
     if (index >= 0) {
-       produtosCarrinho[index].qtde++;
+        produtosCarrinho[index].qtde++;
     } else {
       const novoProduto = await Produto.findByPk(id);
       novoProduto.qtde = 1;
