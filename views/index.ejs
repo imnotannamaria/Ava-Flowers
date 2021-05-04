@@ -52,9 +52,9 @@
         </section>
 
         <section class="mais-vendidias">
-            <div class="container">
-                <div class="row">
-                    <% produtos.forEach( function (produto) { %>
+            <!-- <div class="container"> -->
+              
+                    <% produtos.slice(-9).forEach( function (produto) { %>
                         <div class="col-lg card">
                             <div
                             class="img-principal"
@@ -69,7 +69,7 @@
                                 <a href="/produtos/produto"><p><%= produto.nome %></p></a>
                                 <div class="preco-mais">
                                     <div class="preco">
-                                        <%= produto.valor %>
+                                        <%= produto.valor %> $
                                     </div>
                                     <a href="/produtos/carrinho">
                                         <div class="mais">
@@ -80,9 +80,9 @@
                             </div>
                         </div>
                         
-                </div>
+                
                 <% }); %>
-            </div>
+            <!-- </div> -->
         </section>
         
         <section class="contato">
@@ -103,7 +103,7 @@
 
         <footer>
             <div class="container">
-                <div class="row">
+                <div class="teste">
                     <div class="col-lg">
                         <h3>Outros meios de contato</h3>
                         <div class="social">
