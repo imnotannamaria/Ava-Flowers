@@ -39,20 +39,24 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Girassol.png">
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    O Girassol é uma planta originária da América do Norte e possui a particularidade de ser heliotrópica, ou seja, 
+                    o caule se movimenta posicionando a flor na direção do sol. Os girassóis são conhecidos por transmitir um sentimento
+                     de positividade por causa de suas grandes flores amarelas. 
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
 
-        <div class="info">
-            <h1 class="nome"> Girassol </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-                O Girassol é uma planta originária da América do Norte e possui a particularidade de ser heliotrópica, ou seja, 
-                o caule se movimenta posicionando a flor na direção do sol. Os girassóis são conhecidos por transmitir um sentimento
-                 de positividade por causa de suas grandes flores amarelas.
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>     
+<% }); %> 
+    
         </div>
        
     </section>

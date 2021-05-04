@@ -47,164 +47,32 @@
     <section class="ocasioes_especiais">
         <div class="container">
             <div class="row">
-                <div class="col-lg card">
-                    <img src="/images/ocasiões/diaDasMaes.png" alt="">
-                    <div class="cardinfo">
-                        <a href="/produtos/dia-maes"><p>Dia das mães</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $80,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>    
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/ocasiões/DiaDosNamorados.png" alt="">
-                    <div class="cardinfo">
-                        <a href="/produtos/dia-namorados"><p>Dia Dos Namorados</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                               10%OFF ̶7̶0̶  $62,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                            
-                <div class="col-lg card">
-                    <img src="/images/ocasiões/misto.png" alt="" id="foto3">
-                    <div class="cardinfo">
-                        <a href="/produtos/dia-namoradosMisto"><p>Misto Dia Dos Namorados</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $80,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <% produtos.forEach( function (produto) { %>
+                    <div class="col-lg card">
+                        <div
+                        class="img-principal"
+                        title="foto"
+                        style="background-image: url('<%= produto.img %>')"
+                        ></div>
+                        <div class="cardinfo">
 
-            <div class="row">
-                <div class="col-lg card">
-                    <img src="/images/ocasiões/misto2.png" alt="" id="foto3">
-                    <div class="cardinfo">
-                        <a href="/produtos/dia-maesMisto"><p>Misto dia das Mães</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $75,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
+                            <a href="/produtos/produto"><p><%= produto.nome %></p></a>
+                            <div class="preco-mais">
+                                <div class="preco">
+                                    <%= produto.valor %>
                                 </div>
-                            </a>
-                            
+                                <a href="/produtos/carrinho">
+                                    <div class="mais">
+                                        +
+                                    </div>
+                                </a>    
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/ocasiões/buqueoutono.png" alt="" id="foto3">
-                    <div class="cardinfo">
-                        <a href="/produtos/encontro"><p>Primeiro Encontro</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $50,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/ocasiões/diaDaMulher.png" alt="">
-                    <div class="cardinfo">
-                        <a href="/produtos/dia-mulheres"><p>Buque Dia das Mulheres</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $65,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    
             </div>
-       
-
-                <div class="row">
-                    <div class="col-lg card">
-                        <img src="/images/ocasiões/misto4.png" alt="" id="foto3">
-                        <div class="cardinfo">
-                            <a href="/produtos/encontroMisto"><p>Misto Primeiro Encontro</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $65,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg card">
-                        <img src="/images/ocasiões/casamento.png" alt="" id="foto3">
-                        <div class="cardinfo">
-                            <a href="/produtos/casamento"><p>Pedido de Casamento</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    10%OFF ̶1̶0̶0̶  $90,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg card">
-                        <img src="/images/ocasiões/aniversario.png" alt="" id="foto3">
-                        <div class="cardinfo">
-                            <a href="/produtos/aniversario"><p>Aniversário</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $55,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>      
-        
+            <% }); %>
+        </div>
     </section>
 
     <section class="contato">
