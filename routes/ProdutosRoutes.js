@@ -1,13 +1,49 @@
 const express = require('express');
 const router = express.Router();
 const ProdutosController = require('../controllers/ProdutosController');
+const { Produto, sequelize } = require('../models');
 
 router.get('/', ProdutosController.index);
 //---------------------------rotas todas flores------------------------------------------------
 router.get('/carrinho', ProdutosController.carrinho);
-router.get('/suculenta', ProdutosController.suculenta);
-router.get('/crisantemo', ProdutosController.crisantemo);
-router.get('/girassol', ProdutosController.girassol);
+router.get('/suculenta', async function (req, res, next) {
+  let listaProdutos = await Produto.findAll({
+    where: {
+      id: 14,
+    },
+  });
+  const produtos = listaProdutos.map((result) => result.dataValues);
+  res.render('todasFlores/suculenta', {
+    title: 'Ava-Flowers',
+    produtos: produtos,
+  });
+});
+
+router.get('/crisantemo', async function (req, res, next) {
+  let listaProdutos = await Produto.findAll({
+    where: {
+      id: 18,
+    },
+  });
+  const produtos = listaProdutos.map((result) => result.dataValues);
+  res.render('todasFlores/crisantemo', {
+    title: 'Ava-Flowers',
+    produtos: produtos,
+  });
+});
+
+router.get('/girassol', async function (req, res, next) {
+  let listaProdutos = await Produto.findAll({
+    where: {
+      id: 12,
+    },
+  });
+  const produtos = listaProdutos.map((result) => result.dataValues);
+  res.render('todasFlores/girassol', {
+    title: 'Ava-Flowers',
+    produtos: produtos,
+  });
+});
 router.get('/hortensia', ProdutosController.hortensia);
 router.get('/jasmim', ProdutosController.jasmim);
 router.get('/lirios', ProdutosController.lirios);

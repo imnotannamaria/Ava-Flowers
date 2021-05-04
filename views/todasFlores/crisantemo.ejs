@@ -39,21 +39,25 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Crisantemo.png">
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Pertencente a uma família de flores bastante coloridas. Ele surgiu 
+                    primeiramente na China, tendo um significado místico e cultural relacionado ao poder da vida. 
+                    Suas cores costumam oscilar entre o branco e o bronze e a cor de suas folhas costuma ser um tom 
+                    esverdeado escuro.  
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
 
-        <div class="info">
-            <h1 class="nome"> Crisântemo </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-                Pertencente a uma família de flores bastante coloridas. Ele surgiu 
-                primeiramente na China, tendo um significado místico e cultural relacionado ao poder da vida. 
-                Suas cores costumam oscilar entre o branco e o bronze e a cor de suas folhas costuma ser um tom 
-                esverdeado escuro.
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>             </a>
+<% }); %> 
+
     
         </div>
        

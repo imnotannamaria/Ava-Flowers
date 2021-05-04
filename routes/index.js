@@ -4,7 +4,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  let listaProdutos = await Produto.findAll();
+  let listaProdutos = await Produto.findAll({
+    where: {
+      categoria_id: 21
+      
+
+    }
+  });
   const produtos = listaProdutos.map((result) => result.dataValues);
   res.render('index', { title: 'Ava-Flowers', produtos: produtos });
 });
