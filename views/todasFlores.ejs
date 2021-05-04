@@ -47,161 +47,31 @@
         <section class="todasFlores">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Girassol.png" alt="">
-                        <div class="cardinfo">
-                            <a href="/produtos/girassol"><p>Girassol</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
+                    <% produtos.forEach( function (produto) { %>
+                        <div class="col-lg card">
+                            <div
+                            class="img-principal"
+                            title="foto"
+                            style="background-image: url('<%= produto.img %>')"
+                            ></div>
+                            <div class="cardinfo">
+
+                                <a href="/produtos/produto"><p><%= produto.nome %></p></a>
+                                <div class="preco-mais">
+                                    <div class="preco">
+                                        <%= produto.valor %>
                                     </div>
-                                </a>    
+                                    <a href="/produtos/carrinho">
+                                        <div class="mais">
+                                            +
+                                        </div>
+                                    </a>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Lirios.png" alt="">
-                        <div class="cardinfo">
-                            <a href="/produtos/lirios"><p>Lírio</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Suculenta.png" alt="">
-                        <div class="cardinfo">
-                            <a href="/produtos/suculenta"><p>Suculenta</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        
                 </div>
-
-                <div class="row">
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Violeta.png" alt="">
-                        <div class="cardinfo">
-                            <a href="/produtos/violeta"><p>Violeta</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Rosa.png" alt="" id="foto5">
-                        <div class="cardinfo">
-                            <a href="/produtos/rosa"><p>Rosa</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Jasmim.png" alt="" id="foto6">
-                        <div class="cardinfo">
-                            <a href="/produtos/jasmim"><p>Jasmim</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                    <div class="col-lg card" id="card7">
-                        <img src="/images/todasFlores/Tulipa.png" alt="" id="foto7">
-                        <div class="cardinfo">
-                            <a href="/produtos/tulipa"><p>Tulipa</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>    
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Crisantemo.png" alt="" id="foto8">
-                        <div class="cardinfo">
-                            <a href="/produtos/crisantemo"><p>Crisântemo</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>    
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg card">
-                        <img src="/images/todasFlores/Hortensia.png" alt="" id="foto9">
-                        <div class="cardinfo">
-                            <a href="/produtos/hortensia"><p>Hortênsia</p></a>
-                            <div class="preco-mais">
-                                <div class="preco">
-                                    $20,00
-                                </div>
-                                <a href="/produtos/carrinho">
-                                    <div class="mais">
-                                        +
-                                    </div>
-                                </a>    
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+                <% }); %>
         </section>
         
         <section class="contato">

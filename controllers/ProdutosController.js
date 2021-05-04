@@ -10,7 +10,7 @@ const ProdutosController = {
     return response.render('carrinho');
   },
   //------------------ todas flores----------------------------------------
-  suculenta: (request, response) => {
+  suculenta: async (request, response) => {
     return response.render('todasFlores/suculenta');
   },
   crisantemo: (request, response) => {
