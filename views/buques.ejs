@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/Global.css">
-    <link rel="stylesheet" href="/stylesheets/Index.css">
+    
     <link rel="stylesheet" href="/stylesheets/buques.css">
     <title>Ava Flowers | Buquês</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
@@ -44,161 +44,31 @@
     <section class="buque">
         <div class="container">
             <div class="row">
-                <div class="col-lg card">
-                    <img src="/images/buques/BuqueRosasColoridas.png" alt="">
-                    <div class="cardinfo">
-                        <a href="/produtos/buqueRosaC"><p>Buquê Rosas Coloridas</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $60,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>    
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/buques/flores_campo.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/florCampo"><p>Buquê Flores do Campo</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $120,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/buques/primavera.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/primavera"><p>Buquê Primavera</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $100,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <% produtos.forEach( function (produto) { %>
+                    <div class="col-lg card">
+                        <div
+                        class="img-principal"
+                        title="foto"
+                        style="background-image: url('<%= produto.img %>')"
+                        ></div>
+                        <div class="cardinfo">
 
-            <div class="row">
-                <div class="col-lg card">
-                    <img src="/images/buques/BuqueRosas.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/buque-rosas"><p>Buquê de Rosas </p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $60,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
+                            <a href="/produtos/produto"><p><%= produto.nome %></p></a>
+                            <div class="preco-mais">
+                                <div class="preco">
+                                    <%= produto.valor %>
                                 </div>
-                            </a>
-                            
+                                <a href="/produtos/carrinho">
+                                    <div class="mais">
+                                        +
+                                    </div>
+                                </a>    
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/buques/rosas_nacionais.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/buque-nacionais"><p>Buquê Rosas Nacionais</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $90,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/buques/rosas_orquidias_hortensias.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/orquidia-Hortensia"><p>Buquê Orquidias e Hortênsias</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $150,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    
             </div>
-
-            <div class="row">
-                <div class="col-lg card">
-                    <img src="/images/buques/Buque_mixde_rosas.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/buqueMixRosas"><p>Buquê Mix de Rosas </p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $90,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/buques/BuqueMisto.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/buqueMistos"><p>Buquê Misto</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $60,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg card">
-                    <img src="/images/buques/beleza_colorida.png" alt="" class="foto">
-                    <div class="cardinfo">
-                        <a href="/produtos/buqueBeleza"><p>Buquê Beleza Colorida</p></a>
-                        <div class="preco-mais">
-                            <div class="preco">
-                                $120,00
-                            </div>
-                            <a href="/produtos/carrinho">
-                                <div class="mais">
-                                    +
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
+            <% }); %>
         </div>
     </section>
 

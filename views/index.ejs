@@ -52,9 +52,9 @@
         </section>
 
         <section class="mais-vendidias">
-            <div class="container">
-                <div class="row">
-                    <% produtos.forEach( function (produto) { %>
+            <!-- <div class="container"> -->
+              
+                    <% produtos.slice(-9).forEach( function (produto) { %>
                         <div class="col-lg card">
                             <div
                             class="img-principal"
@@ -62,10 +62,14 @@
                             style="background-image: url('<%= produto.img %>')"
                             ></div>
                             <div class="cardinfo">
-                                <a href="/produtos/produto?id=<%= produto.id %>"><p><%= produto.nome %></p></a>
+                                <% if (produto.id=14) { %>
+                                <a href="/produtos/suculenta"><p><%= produto.nome %></p></a>
+
+                                <% } %>
+                                <a href="/produtos/produto"><p><%= produto.nome %></p></a>
                                 <div class="preco-mais">
                                     <div class="preco">
-                                        <%= produto.valor %>
+                                        <%= produto.valor %> $
                                     </div>
                                     <a href="/produtos/carrinho?id=<%= produto.id %>">
                                         <div class="mais">
@@ -75,9 +79,10 @@
                                 </div>
                             </div>
                         </div>
-                        <% }); %>
-                </div>
-            </div>
+                        
+                
+                <% }); %>
+            <!-- </div> -->
         </section>
         
         <section class="contato">
@@ -88,8 +93,8 @@
                 </div>
                 <div class="form-contato">
                     <p>Mande uma mensagem: </p>
-                    <input type="text" name="nome" placeholder ="Digite seu nome">
-                    <input type="email" name="email" placeholder ="Digite seu email">
+                    <input type="text"  placeholder ="Digite seu nome">
+                    <input type="email"  placeholder ="Digite seu email">
                     <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder ="Digite sua mensagem"></textarea>
                     <button type="submit" id="btn-subimit-contact">Enviar</button>
                 </div>
@@ -98,7 +103,7 @@
 
         <footer>
             <div class="container">
-                <div class="row">
+                <div class="teste">
                     <div class="col-lg">
                         <h3>Outros meios de contato</h3>
                         <div class="social">
