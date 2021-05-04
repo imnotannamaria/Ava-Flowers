@@ -13,7 +13,7 @@ const ProdutosController = {
 
   carrinho: async (request, response) => {
     let id = request.query.id;
-
+    
     if (id) {
       let index = produtosCarrinho.findIndex(findProduto, id);
 
@@ -24,6 +24,8 @@ const ProdutosController = {
         novoProduto.qtde = 1;
         produtosCarrinho.push(novoProduto);
       }
+
+      response.redirect('/produtos/carrinho');
     }
 
     let total = 0;
