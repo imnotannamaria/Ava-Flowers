@@ -24,6 +24,7 @@ const ProdutosController = {
         novoProduto.qtde = 1;
         produtosCarrinho.push(novoProduto);
       }
+
     }
 
     let total = 0;
@@ -35,7 +36,7 @@ const ProdutosController = {
   },
   
 
-  
+ 
   //------------------ todas flores----------------------------------------
   suculenta: async (request, response) => {
     return response.render('todasFlores/suculenta');
