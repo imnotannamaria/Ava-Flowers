@@ -56,8 +56,10 @@
                             style="background-image: url('<%= produto.img %>')"
                             ></div>
                             <div class="cardinfo">
-                                <a href=""><p><%= produto.nome %></p></a>
+                                <% if (produto.id=14) { %>
+                                <a href="/produtos/suculenta"><p><%= produto.nome %></p></a>
 
+                                <% } %>
                                 <div class="preco-mais">
                                     <div class="preco">
                                         <%= produto.valor %> $
@@ -94,6 +96,8 @@
 
         <footer>
             <div class="container">
+                <div class="teste">
+                    <div class="col-lg">
                         <h3>Outros meios de contato</h3>
                         <div class="social">
                             <div class="icon-wrapper">
@@ -106,6 +110,9 @@
                                 <a href=""><img src="/images/icons/instagram.png" alt=""></a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
         </footer>
         
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
