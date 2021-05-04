@@ -1,11 +1,11 @@
 //Middlewares = camada de proteção antes de chamar o controller
-const { Cliente } = require('../models');
+const { Cliente, sequelize } = require('../models');
 
 module.exports = async (request, response, next) => {
   let {
-    nome,
     email,
     senha,
+    nome,
     logradouro,
     cidade,
     estado,
@@ -16,9 +16,9 @@ module.exports = async (request, response, next) => {
 
   let user = await Cliente.findAll({
     where: {
-      nome,
       email,
       senha,
+      nome,
       logradouro,
       cidade,
       estado,
@@ -63,7 +63,19 @@ module.exports = async (request, response, next) => {
                   .json({ error: 'Inisira um logradouro válido' });
                 return;
               } else {
-                next();
+                if (2 > 1) {
+                  const userExists = await Cliente.findOne({
+                    where: { email: request.body.email },
+                  });
+                  // se existir, vou devolver uma mensagem de erro
+                  if (userExists) {
+                    return response
+                      .status(400)
+                      .json({ error: 'Usuário já existe!' });
+                  } else {
+                    next();
+                  }
+                }
               }
             }
           }
