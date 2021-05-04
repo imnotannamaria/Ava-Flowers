@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+.container {
+    max-width: 60%;
+}
+
 .titulo{
     margin-top: 3rem;
 }
@@ -120,19 +124,19 @@ h1{
     display: none;
 }
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1280px) {
     .preco-add-excluir-wrapper{
         width: 700px;
     }
 }
 
-@media only screen and (max-width: 1310px) {
+@media only screen and (max-width: 1280px) {
     .preco-add-excluir-wrapper{
         width: 500px;
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1280px) {
 
     .produto{
         display: flex;

@@ -15,7 +15,4 @@ router.get('/', async function (req, res, next) {
   res.render('index', { title: 'Ava-Flowers', produtos: produtos });
 });
 
-
-
-
 module.exports = router;
