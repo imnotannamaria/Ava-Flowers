@@ -52,22 +52,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md">
+                    <% produtosCarrinho.forEach( function (produto) { %>
                     <div class="produto">
-                        <img class="produto-img" src="/images/buques/BuqueRosas.png" alt="">
+                        <img class="produto-img" src="<%= produto.img %>" alt="">
                         <div class="descricao">
                             
                             <div class="preco-add-excluir">
                                 <div class="preco-add-excluir-wrapper">
                                     <div class="nome">
-                                        <h3>Buques rosas coloridas</h3>
+                                        <h3><%= produto.nome %></h3>
                                     </div>
                                     <div class="preco-add">
                                         <div class="preco">
-                                            $60,00
+                                            <%= produto.valor %>
                                         </div>
                                         <div class="add">
                                             <button id="buttonRemove1" class="botao"><</button>
-                                                <span  id="number1">1</span>
+                                                <span  id="number1"><%= produto.qtde %></span>
                                             <button id="buttonAdd1" type="button" class="botao">></button>
                                         </div>
                                     </div>
@@ -81,67 +82,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="produto">
-                        <img class="produto-img" src="/images/todasFlores/Lirios.png" alt="">
-                        <div class="descricao">
-                            
-                            <div class="preco-add-excluir">
-                                <div class="preco-add-excluir-wrapper">
-                                    <div class="nome">
-                                        <h3>Lírios</h3>
-                                    </div>
-                                    <div class="preco-add">
-                                        <div class="preco">
-                                            $60,00
-                                        </div>
-                                        <div class="add">
-                                            <button id="buttonRemove2" class="botao"><</button>
-                                                <span  id="number2">1</span>
-                                            <button id="buttonAdd2" type="button" class="botao">></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <a href="">
-                                    <div class="excluir">
-                                        <img src="/images/icons/trash.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="produto">
-                        <img  class="produto-img" src="/images/ocasiões/DiaDosNamorados.png" alt="">
-                        <div class="descricao">
-                            
-                            <div class="preco-add-excluir">
-                                <div class="preco-add-excluir-wrapper">
-                                    <div class="nome">
-                                        <h3>Dia dos namorados</h3>
-                                    </div>
-                                    <div class="preco-add">
-                                        <div class="preco">
-                                            $60,00
-                                        </div>
-                                        <div class="add">
-                                            <button id="buttonRemove3" class="botao"><</button>
-                                                <span  id="number3">1</span>
-                                            <button id="buttonAdd3" type="button" class="botao">></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <a href="">
-                                    <div class="excluir">
-                                        <img src="/images/icons/trash.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-        
+                    <% }); %>
                 </div>
             </div>
         </div>
@@ -149,14 +90,16 @@
         <hr>
         <br>
         <div class="preco-info">
+            
             <h1>Total: </h1>
-            <span class="brown">$180,00 +</span>
+            <span class="brown">$<%= valorTotal %> +</span>
+           
             <br>
             <span class="brown"> ̶$̶5̶0̶,̶0̶0̶ (frete grátis)</span>
             <br>
             <span class="brown">------------------------</span>
             <br>
-            <span class="orange">$180,00</span>
+            <span class="orange">$<%= valorTotal %></span>
             <br>
             <br>
             <a class="botao-finalizar" href="/clientes/cadastro">FINALIZAR COMPRA</a>
@@ -203,11 +146,9 @@
         const number1 = document.querySelector("#number1");
         const number2 = document.querySelector("#number2");
         const number3 = document.querySelector("#number3");
-
         var count1 = 1;
         var count2 = 1;
         var count3 = 1;
-
         document.querySelector("#buttonAdd1").addEventListener('click', (evento) => {
             count1++;
             number1.innerText = count1; 
@@ -218,7 +159,6 @@
                 number1.innerText = count1; 
             }
         });
-
         document.querySelector("#buttonAdd2").addEventListener('click', (evento) => {
             count2++;
             number2.innerText = count2; 
@@ -229,7 +169,6 @@
                 number2.innerText = count2; 
             }
         });
-
         document.querySelector("#buttonAdd3").addEventListener('click', (evento) => {
             count3++;
             number3.innerText = count3; 
@@ -243,7 +182,6 @@
         
     
         //REMOVER
-
         document.querySelector("#buttonRemove1").addEventListener('click', (evento) => {
             count1--;
             number1.innerText = count1; 
@@ -254,7 +192,6 @@
                 number1.innerText = count1; 
             }
         })
-
         document.querySelector("#buttonRemove2").addEventListener('click', (evento) => {
             count2--;
             number2.innerText = count2; 
@@ -265,7 +202,6 @@
                 number2.innerText = count2; 
             }
         })
-
         document.querySelector("#buttonRemove3").addEventListener('click', (evento) => {
             count3--;
             number3.innerText = count3; 
@@ -276,11 +212,9 @@
                 number3.innerText = count3; 
             }
         })
-
         function fecharBotao(){
             let modal1 = document.getElementById('modal1');
             let modal2 = document.getElementById('modal2');
-
             modal1.style.display = "none";
             modal2.style.display = "none";
         }

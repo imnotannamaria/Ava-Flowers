@@ -1,14 +1,37 @@
 const { Produto, sequelize } = require('../models');
 
+let produtosCarrinho = [];
+function findProduto(element, index, array) {
+  return (element.id == this);
+}
+
 const ProdutosController = {
   index: async (req, res) => {
     const produtos = await Produto.findAll();
     return res.json(produtos);
   },
 
-  carrinho: (request, response) => {
-    return response.render('carrinho');
+  carrinho: async (request, response) => {
+    let id = request.query.id;
+
+    let index = produtosCarrinho.findIndex(findProduto, id);
+
+    if (index >= 0) {
+       produtosCarrinho[index].qtde++;
+    } else {
+      const novoProduto = await Produto.findByPk(id);
+      novoProduto.qtde = 1;
+      produtosCarrinho.push(novoProduto);
+    }
+
+    let total = 0;
+    produtosCarrinho.forEach((produto) => {
+       total += (produto.valor * produto.qtde);
+    } );
+
+    return response.render('carrinho', { produtosCarrinho: produtosCarrinho, valorTotal: total });
   },
+  
   //------------------ todas flores----------------------------------------
   suculenta: (request, response) => {
     return response.render('todasFlores/suculenta');

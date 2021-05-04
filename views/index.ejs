@@ -62,12 +62,12 @@
                             style="background-image: url('<%= produto.img %>')"
                             ></div>
                             <div class="cardinfo">
-                                <a href="/produtos/produto"><p><%= produto.nome %></p></a>
+                                <a href="/produtos/produto?id=<%= produto.id %>"><p><%= produto.nome %></p></a>
                                 <div class="preco-mais">
                                     <div class="preco">
                                         <%= produto.valor %>
                                     </div>
-                                    <a href="/produtos/carrinho">
+                                    <a href="/produtos/carrinho?id=<%= produto.id %>">
                                         <div class="mais">
                                             +
                                         </div>
