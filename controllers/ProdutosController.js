@@ -37,7 +37,7 @@ const ProdutosController = {
   },
   
 
-  
+ 
   //------------------ todas flores----------------------------------------
   suculenta: async (request, response) => {
     return response.render('todasFlores/suculenta');

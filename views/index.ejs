@@ -23,10 +23,6 @@
                         <img src="/images/LogoHeader.png" alt="">
                     </div>
                 </a>
-                <div class="header-buscar">
-                    <input type="text">
-                    <img src="/images/icons/lupa.png" alt="">
-                </div>
                 <a href="/produtos/carrinho">
                     <div class="header-carrinho">
                         <img src="/images/Carrinho.png" alt="">
@@ -52,8 +48,6 @@
         </section>
 
         <section class="mais-vendidias">
-            <!-- <div class="container"> -->
-              
                     <% produtos.slice(-9).forEach( function (produto) { %>
                         <div class="col-lg card">
                             <div
@@ -66,7 +60,6 @@
                                 <a href="/produtos/suculenta"><p><%= produto.nome %></p></a>
 
                                 <% } %>
-                                <a href="/produtos/produto"><p><%= produto.nome %></p></a>
                                 <div class="preco-mais">
                                     <div class="preco">
                                         <%= produto.valor %> $
