@@ -14,14 +14,17 @@ const ProdutosController = {
   carrinho: async (request, response) => {
     let id = request.query.id;
 
-    let index = produtosCarrinho.findIndex(findProduto, id);
+    if (id) {
+      let index = produtosCarrinho.findIndex(findProduto, id);
 
-    if (index >= 0) {
+      if (index >= 0) {
         produtosCarrinho[index].qtde++;
-    } else {
-      const novoProduto = await Produto.findByPk(id);
-      novoProduto.qtde = 1;
-      produtosCarrinho.push(novoProduto);
+      } else {
+        const novoProduto = await Produto.findByPk(id);
+        novoProduto.qtde = 1;
+        produtosCarrinho.push(novoProduto);
+      }
+
     }
 
     let total = 0;
@@ -32,6 +35,8 @@ const ProdutosController = {
     return response.render('carrinho', { produtosCarrinho: produtosCarrinho, valorTotal: total });
   },
   
+
+ 
   //------------------ todas flores----------------------------------------
   suculenta: async (request, response) => {
     return response.render('todasFlores/suculenta');
