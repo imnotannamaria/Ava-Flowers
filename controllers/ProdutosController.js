@@ -32,6 +32,8 @@ const ProdutosController = {
     return response.render('carrinho', { produtosCarrinho: produtosCarrinho, valorTotal: total });
   },
   
+
+  
   //------------------ todas flores----------------------------------------
   suculenta: (request, response) => {
     return response.render('todasFlores/suculenta');
