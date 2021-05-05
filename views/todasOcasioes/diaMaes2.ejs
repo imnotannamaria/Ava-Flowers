@@ -48,10 +48,9 @@
                  Dia das Mães, faça sua homenagem sincera a sua mãe!   
                  <br> Este charmoso arranjo caprichosamente embalado em papel de seda especial é a mais pura expressão de amor. 
                  Não dá pra segurar a emoção quando se recebe um presente assim              </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
         </div>
        
     </section>
@@ -82,14 +81,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

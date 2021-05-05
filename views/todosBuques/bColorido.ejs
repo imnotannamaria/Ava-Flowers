@@ -48,10 +48,9 @@
                     Uma combinação inusitada e harmoniosa de cores, neste lindo buquê 
                  com flores em diferentes tons e cores adornado por folhagens
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
        
        
     </section>
@@ -88,14 +87,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Buquê</button> </a>   
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

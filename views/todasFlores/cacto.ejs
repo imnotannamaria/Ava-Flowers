@@ -48,11 +48,10 @@
                     Os cactos são plantas espinhentas que conseguem sobreviver em ambientes
                      extremamente quentes ou áridos, pelo fato de terem a capacidade de acumular água em seus tecidos.
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
-    
+
         </div>
        
     </section>
@@ -85,14 +84,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
-            <button class="comprar">Adquira seu Girassol</button> </a> 
+        <a class="btn"  href="/produtos/carrinho?id=<%= produto.id %>"> 
+            <button class="comprar">Adquira seu Cacto</button> </a> 
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

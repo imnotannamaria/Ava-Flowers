@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     
 Elegante coroa fúnebre para velório, confeccionada com flores brancas e amarelas. Dedique seus sentimentos com este arranjo fúnebre para velórios.<br> Representando com sensibilidade ...     </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
     
         </div>
        
@@ -82,12 +81,13 @@ Elegante coroa fúnebre para velório, confeccionada com flores brancas e amarel
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
   
 

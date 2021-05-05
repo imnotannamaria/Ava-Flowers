@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     Um belissímo buque composto pelas tulipas mais bonitas da floricultura 
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
        
        
     </section>
@@ -87,14 +86,14 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Buquê</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
-  
 
     <footer>
         <div class="container">

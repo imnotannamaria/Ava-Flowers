@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     Um buquê delicado para iluminar o dia de quem o recebe 
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
        
        
     </section>
@@ -87,12 +86,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Buquê</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
   
 

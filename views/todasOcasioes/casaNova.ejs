@@ -47,10 +47,9 @@
                 <p class="informacoes">
                 O lindo jarro de flores para representar o começo de uma nova fase da vida como um novo lar! 
             <br> Um toque de alegria na sua nova casa            </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
         </div>
        
     </section>
@@ -81,12 +80,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
   
 

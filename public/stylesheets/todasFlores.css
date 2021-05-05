@@ -15,7 +15,9 @@
 
 /* SECTION MAIS VENDIDOS*/
 /* ============================================================================================= */
-
+body{
+  overflow-x: hidden;
+}
 
 .todasFlores {
   margin-top: 100px;

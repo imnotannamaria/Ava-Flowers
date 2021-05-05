@@ -46,7 +46,7 @@
         </div>
 
         <div class="container">
-            
+            <div class="row">
                 <div class="col-md">
                     <% produtosCarrinho.forEach( function (produto) { %>
                     <div class="produto">
@@ -63,14 +63,14 @@
                                             <%= produto.valor %>
                                         </div>
                                         <div class="add">
-                                            <button id="buttonRemove1" class="botao"><</button>
-                                                <span  id="number1"><%= produto.qtde %></span>
-                                            <button id="buttonAdd1" type="button" class="botao">></button>
+                                            <button id="buttonRemove_<%= produto.id %>" class="botao"><</button>
+                                                <span><%= produto.qtde %></span>
+                                            <button id="buttonAdd_<%= produto.id %>" type="button" class="botao">></button>
                                         </div>
                                     </div>
                                 </div>
                             
-                                <a href="">
+                                <a href="/produtos/carrinho?isTrash=true&id=<%= produto.id %>">
                                     <div class="excluir">
                                         <img src="/images/icons/trash.png" alt="">
                                     </div>
@@ -80,8 +80,8 @@
                     </div>
                     <% }); %>
                 </div>
-            
             </div>
+        </div>
         <br> 
         <hr>
         <br>
@@ -105,7 +105,7 @@
         </div>
     </div>  
 
-    <div id="modal2" class="modal" tabindex="-1" role="dialog">
+    <!--div id="modal2" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -119,9 +119,8 @@
                 </div>
             </div>
             </div>
-    </div>
-
-    <div id="modal1" class="modal" tabindex="-1" role="dialog">
+    </!--div>
+    <div-- id="modal1" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -135,84 +134,20 @@
             </div>
         </div>
         </div>
-</div>
+</div-->
 
     <script>
-        const number1 = document.querySelector("#number1");
-        const number2 = document.querySelector("#number2");
-        const number3 = document.querySelector("#number3");
-        var count1 = 1;
-        var count2 = 1;
-        var count3 = 1;
-        document.querySelector("#buttonAdd1").addEventListener('click', (evento) => {
-            count1++;
-            number1.innerText = count1; 
-            if(count1 > 10/* quantidade no escote*/){
-                let modal = document.getElementById('modal1');
-                modal.style.display = "block";
-                count1 = 1;
-                number1.innerText = count1; 
-            }
-        });
-        document.querySelector("#buttonAdd2").addEventListener('click', (evento) => {
-            count2++;
-            number2.innerText = count2; 
-            if(count2 > 10/* quantidade no escote*/){
-                let modal = document.getElementById('modal1');
-                modal.style.display = "block";
-                count2 = 1;
-                number2.innerText = count2; 
-            }
-        });
-        document.querySelector("#buttonAdd3").addEventListener('click', (evento) => {
-            count3++;
-            number3.innerText = count3; 
-            if(count3 > 10/* quantidade no escote*/){
-                let modal = document.getElementById('modal1');
-                modal.style.display = "block";
-                count3 = 1;
-                number3.innerText = count3; 
-            }
-        });
-        
-    
-        //REMOVER
-        document.querySelector("#buttonRemove1").addEventListener('click', (evento) => {
-            count1--;
-            number1.innerText = count1; 
-            if(count1 <= 0/* quantidade no escote*/){
-                let modal = document.getElementById('modal2');
-                modal.style.display = "block";
-                count1 = 1;
-                number1.innerText = count1; 
-            }
+        document.querySelectorAll('.botao').forEach(item => {
+            item.addEventListener('click', event => {
+                let name = event.target.id;
+                let id = name.split('_')[1];
+                if (name.startsWith("buttonRemove")) {
+                    this.document.location = "/produtos/carrinho?isRemove=true&id=" + id;
+                } else {
+                    this.document.location = "/produtos/carrinho?id=" + id;
+                }
+            })
         })
-        document.querySelector("#buttonRemove2").addEventListener('click', (evento) => {
-            count2--;
-            number2.innerText = count2; 
-            if(count2 <= 0/* quantidade no escote*/){
-                let modal = document.getElementById('modal2');
-                modal.style.display = "block";
-                count2 = 1;
-                number2.innerText = count2; 
-            }
-        })
-        document.querySelector("#buttonRemove3").addEventListener('click', (evento) => {
-            count3--;
-            number3.innerText = count3; 
-            if(count3 <= 0/* quantidade no escote*/){
-                let modal = document.getElementById('modal2');
-                modal.style.display = "block";
-                count3 = 1;
-                number3.innerText = count3; 
-            }
-        })
-        function fecharBotao(){
-            let modal1 = document.getElementById('modal1');
-            let modal2 = document.getElementById('modal2');
-            modal1.style.display = "none";
-            modal2.style.display = "none";
-        }
     </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

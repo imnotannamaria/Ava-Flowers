@@ -50,10 +50,9 @@
                         de água em quantidades muito maiores que 
                         nas plantas normais.  
                         </p>
-                        <a class="btn" href="/produtos/carrinho"> 
+                        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                             <button class="comprar">Comprar</button> </a> 
 
-       <% }); %> 
 
             
         </div>
@@ -89,12 +88,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira sua Suculenta</button> </a> 
 
 
     </div>
       
+    <% }); %> 
 
   
 

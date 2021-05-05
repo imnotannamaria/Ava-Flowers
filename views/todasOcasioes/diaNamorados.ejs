@@ -48,10 +48,9 @@
                     Demonstre seu amor no Dia dos Namorados!  <br>Puro charme... Arranjo com mistura harmoniosa de rosas 
                     rosadas, em um elegante vasinho de vidro. 
                     Embalagem especial!!  </p>             </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
     
         </div>
        
@@ -83,12 +82,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
   
 

@@ -41,7 +41,6 @@
         </header>
 
         <section class="todasFlores">
-           
                     <% produtos.forEach( function (produto) { %>
                         <div class="col-lg card">
                             <div
@@ -54,9 +53,9 @@
                                 <a href="<%=produto.descricao%> "><p><%= produto.nome %></p></a>
                                 <div class="preco-mais">
                                     <div class="preco">
-                                        <%= produto.valor %>
+                                        <%= produto.valor %> $
                                     </div>
-                                    <a href="/produtos/carrinho">
+                                    <a href="/produtos/carrinho?id=<%= produto.id %>">
                                         <div class="mais">
                                             +
                                         </div>

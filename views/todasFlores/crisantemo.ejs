@@ -49,10 +49,9 @@
                     Suas cores costumam oscilar entre o branco e o bronze e a cor de suas folhas costuma ser um tom 
                     esverdeado escuro.  
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
 
     
         </div>
@@ -89,14 +88,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Crisântemo</button> </a> 
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

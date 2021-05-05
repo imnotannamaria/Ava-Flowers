@@ -49,10 +49,9 @@
                  o azul clarinho, o rosa, o branco e a lavanda. Algumas vezes, você pode ter todas essas cores em uma 
                  só plantinha
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %>     
         </div>
        
     </section>
@@ -85,8 +84,10 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira sua Hortênsia</button> </a> 
+        
+            <% }); %>     
 
 
     </div>

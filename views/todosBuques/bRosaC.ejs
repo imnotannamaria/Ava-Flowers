@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     As rosas coloridas  são belas, encantadoras e elegantes. Para você que não gosta muito de padrão e 
                     está procurando um presente que encha  o ambiente de felicidade e cores.                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %>   
         </div>
        
     </section>
@@ -87,12 +86,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Buquê</button> </a>   
 
 
     </div>
       
+    <% }); %>   
 
   
 
