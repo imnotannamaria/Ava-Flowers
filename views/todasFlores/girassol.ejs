@@ -49,10 +49,9 @@
                     o caule se movimenta posicionando a flor na direção do sol. Os girassóis são conhecidos por transmitir um sentimento
                      de positividade por causa de suas grandes flores amarelas. 
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
     
         </div>
        
@@ -86,14 +85,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Girassol</button> </a> 
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

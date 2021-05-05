@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     Um Buquê lembrando o Outono, alegre e elegante composto por mix de lindas flores em tons de laranja e amarelo. 
                     São gérberas, lírios, rosas nacionais e importadas e alstroemérias. Embalado com carinho         </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
     
         </div>
        
@@ -82,14 +81,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

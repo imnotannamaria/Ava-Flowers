@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     Puro charme! Arranjo com mistura harmoniosa de rosas nacionais nos tons rosado e avermelhado, acompanhadas de tango,
                      lisianthus e alstroemérias amarelas         </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %>   
         </div>
        
     </section>
@@ -87,14 +86,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Buquê</button> </a>   
 
 
     </div>
       
 
-  
+    <% }); %>   
+
 
     <footer>
         <div class="container">

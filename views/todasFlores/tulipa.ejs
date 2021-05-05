@@ -47,10 +47,9 @@
                     As tulipas são flores charmosas que deixam os ambientes mais modernos e coloridos.
                     De origem asiática, ela foi levada à Holanda em 1560 e se tornou um símbolo do país. 
                 </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %>  
  
         </div>
        
@@ -82,8 +81,9 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira sua Tulipa</button> </a> 
+            <% }); %>  
 
 
     </div>

@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     Torne o Dia da Mulher especial de quem você mais ama!           
                     <br>Um delicado apanhado de flores, embrulhado cheio de carinho em papel seda especial. </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
     
         </div>
        
@@ -82,12 +81,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
   
 

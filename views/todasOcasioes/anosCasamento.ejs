@@ -48,10 +48,9 @@
                 Celebre mais um ano juntos! 
                 <br>Para a comemoração de mais um ano de casados sugerimos esse maravilhoso buque com uma mistura de flores coloridas, para outro 
             ano cheio de alegria e amor               </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
 
         </div>
        
@@ -83,14 +82,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">

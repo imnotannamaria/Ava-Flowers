@@ -48,10 +48,9 @@
                     Surpreenda nessa data especial!           
                     <br> Muitas, muitas cores neste mix de flores com rosas, anastácias, lisianthus e alstroemérias em meio
                      à folhagens verdes dentro de um vaso charmoso. Alegria em forma de presente </p>                </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
         </div>
        
     </section>
@@ -82,12 +81,13 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
+    <% }); %> 
 
   
 

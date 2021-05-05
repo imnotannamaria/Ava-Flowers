@@ -47,10 +47,9 @@
                 <p class="informacoes">
                     Buquê tradicional vermelho, nada como uma boa inspiração para conseguir transformar
                  tudo o que está em seu coração em um gesto durante o pedido de casamento.  </p>             </p>
-                <a class="btn" href="/produtos/carrinho"> 
+                <a class="btn"href="/produtos/carrinho?id=<%= produto.id %>"> 
                     <button class="comprar">Comprar</button> </a> 
 
-<% }); %> 
       
     
         </div>
@@ -83,14 +82,15 @@
     <div class="container-btn">
         
         
-        <a class="btn" href="/produtos/carrinho"> 
+        <a class="btn" href="/produtos/carrinho?id=<%= produto.id %>"> 
             <button class="comprar">Adquira seu Conjunto</button> </a>   
 
 
     </div>
       
 
-  
+    <% }); %> 
+
 
     <footer>
         <div class="container">
