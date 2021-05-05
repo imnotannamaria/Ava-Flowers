@@ -23,6 +23,12 @@ const clientesController = {
     }
   },
 
+  logoff: (req, res) => {
+    req.session.destroy();
+
+    return res.redirect('/');
+  },
+
   cadastro: (request, response) => {
     return response.render('cadastro');
   },
