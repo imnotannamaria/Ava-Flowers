@@ -22,6 +22,4 @@ router.delete('/:id', clientesController.delete);
 
 router.get('/logoff', clientesController.logoff);
 
-router.get('/VerificaLogin', clientesController.verificaLogin);
-
 module.exports = router;

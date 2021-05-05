@@ -28,15 +28,6 @@ const clientesController = {
 
     return res.redirect('/');
   },
-
-  verificaLogin: (req, res) => {
-    if (req.session.clientes == req.session.clientes) {
-      return res.redirect('/clientes/confirmacao');
-    } else {
-      return res.redirect('/clientes/cadastro');
-    }
-  },
-
   cadastro: (request, response) => {
     return response.render('cadastro');
   },
