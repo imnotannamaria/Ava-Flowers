@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const clientesController = require('../controllers/ClientesController');
 const validarCadastro = require('../middlewares/ValidarCadastro');
+const validarlogin = require('../middlewares/ValidarLogin');
 
 router.get('/', clientesController.index);
 
@@ -11,7 +12,7 @@ router.get('/login', clientesController.login);
 
 router.post('/login', clientesController.auth);
 
-router.get('/confirmacao', clientesController.confirmacao);
+router.get('/confirmacao', validarlogin, clientesController.confirmacao);
 
 router.post('/', validarCadastro, clientesController.create);
 
@@ -20,5 +21,7 @@ router.put('/:id', clientesController.update);
 router.delete('/:id', clientesController.delete);
 
 router.get('/logoff', clientesController.logoff);
+
+router.get('/VerificaLogin', clientesController.verificaLogin);
 
 module.exports = router;
