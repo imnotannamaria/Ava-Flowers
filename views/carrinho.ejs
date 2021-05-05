@@ -60,10 +60,10 @@
                                     </div>
                                     <div class="preco-add">
                                         <div class="preco">
-                                            <%= produto.valor %>
+                                            <%= produto.valor %> $
                                         </div>
                                         <div class="add">
-                                            <button id="buttonRemove1" class="botao"><</button>
+                                            <button id="buttonRemove1" type="button" class="botao"><</button>
                                                 <span  id="number1"><%= produto.qtde %></span>
                                             <button id="buttonAdd1" type="button" class="botao">></button>
                                         </div>
@@ -146,12 +146,15 @@
         var count3 = 1;
         document.querySelector("#buttonAdd1").addEventListener('click', (evento) => {
             count1++;
+            
             number1.innerText = count1; 
+            Location.reload();
             if(count1 > 10/* quantidade no escote*/){
                 let modal = document.getElementById('modal1');
                 modal.style.display = "block";
                 count1 = 1;
                 number1.innerText = count1; 
+                
             }
         });
         document.querySelector("#buttonAdd2").addEventListener('click', (evento) => {

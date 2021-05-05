@@ -10,8 +10,9 @@
   width: 50%;
   position: static;
   background: #cd8655;
-  border-top-left-radius: 50.5px;
+  border-radius: 20px 0 0 20px;
 }
+
 .info {
   justify-content: space-evenly;
   display: flex;
@@ -35,7 +36,10 @@
   color: #ffffff;
 }
 .preco {
-  padding: 10px, 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
   align-self: center;
   color: #ffffff;
   font-size: 36px;
@@ -94,4 +98,54 @@
 .btn .comprar {
   width: 50%;
   border-radius: 50px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .imagem {
+    width: 50%;
+
+  }
+  
+  .info {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+    .imagem {
+      width: 100%;
+  
+    }
+    
+    .info {
+      width: 100%;
+    }
+
+    .container-produto {
+      flex-direction: column;
+    }
+
+    .imagem {
+      border-radius: 20px 20px 0 0;
+    }
+    
+}
+
+@media only screen and (max-width: 660px) {
+  .comprar {
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+  }
+
+  .info {
+    width: 100%;
+    padding: 10px;
+    background: #cd8655;
+  }
+
+  .container-cuidados {
+    padding-left: 50px;
+  }
+  
 }

@@ -1,3 +1,8 @@
+body{
+  overflow-x: hidden;
+  background-color: red;
+}
+
 .ocasioes_especiais {
   margin-top: 100px;
 }
