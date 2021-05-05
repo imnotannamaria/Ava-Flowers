@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,26 +39,22 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/ocasiões/aniversario.png">
-
-        <div class="info">
-            <h1 class="nome">Aniversário</h1>
-         
-            <span class="preco">R$65,00</span>
-            
-            <p class="informacoes">
-            Surpreenda nessa data especial!           
-             <br> Muitas, muitas cores neste mix de flores com rosas, anastácias, lisianthus e alstroemérias em meio
-              à folhagens verdes dentro de um vaso charmoso. Alegria em forma de presente </p>
-            <div class="container-btn">
-        
-        
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Surpreenda nessa data especial!           
+                    <br> Muitas, muitas cores neste mix de flores com rosas, anastácias, lisianthus e alstroemérias em meio
+                     à folhagens verdes dentro de um vaso charmoso. Alegria em forma de presente </p>                </p>
                 <a class="btn" href="/produtos/carrinho"> 
-                    <button class="comprar">Comprar</button> </a>           
-        
-        
-            </div>
-    
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %> 
         </div>
        
     </section>

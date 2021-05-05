@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,21 +39,26 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Lirios.png">
-
-        <div class="info">
-            <h1 class="nome"> Lírio </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-                Os lírios são originárias do hemisfério norte com ocorrências na Europa, Ásia, América do Norte,
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Os lírios são originárias do hemisfério norte com ocorrências na Europa, Ásia, América do Norte,
                  e América do Sul. Mais da metade das espécies são encontradas na China e no Japão.
                   As plantas atingem, normalmente, de 1,20 a 2 metros de altura. 
-                  Várias espécies de lírios também recebem o nome de açucena.
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>     
+                  Várias espécies de lírios também recebem o nome de açucena.de ser plantada. <br>O seu cheiro delicioso é exalado durante a noite, 
+                    iniciando após o pôr do sol.
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %>   
+        
         </div>
        
     </section>

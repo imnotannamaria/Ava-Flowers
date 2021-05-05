@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,24 +39,25 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Jasmim.png">
-
-        <div class="info">
-            <h1 class="nome"> Jasmim </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-             A flor de jasmim, entretanto, tem entre cinco ou seis pétalas. Essa flor é perfeita para fazer um canteiro
-              cheiroso para a sua casa. A floração da flor de jasmim ocorre, geralmente, no verão e na primavera, 
-              geralmente seis meses depois de ser plantada. <br>O seu cheiro delicioso é exalado durante a noite, 
-              iniciando após o pôr do sol.
-
-
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
                
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>     
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    A flor de jasmim, tem entre cinco ou seis pétalas. Essa flor é perfeita para fazer um canteiro
+                    cheiroso para a sua casa. A floração da flor de jasmim ocorre, geralmente, no verão e na primavera, 
+                    geralmente seis meses depois de ser plantada. <br>O seu cheiro delicioso é exalado durante a noite, 
+                    iniciando após o pôr do sol.
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %>   
+            
         </div>
        
     </section>

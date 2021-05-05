@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,50 +39,49 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/ocasiões/misto.png">
-
-        <div class="info">
-            <h1 class="nome">Misto Dia dos Namorados </h1>
-         
-            <span class="preco">R$80,00</span>
-            
-            <p class="informacoes">
-                Demonstre seu amor no Dia dos Namorados!  
-
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
                 
-            <br>Um Buquê de Flores do Campo alegre e elegante composto por mix de lindas flores em tons de laranja e 
-            amarelo. São gérberas, lírios, rosas nacionais e importadas e alstroemérias. Embalado com carinho em papel de seda </p>
-            <div class="container-btn">
-        
-        
+                <p class="informacoes">
+                    Um belissímo buque composto pelas tulipas mais bonitas da floricultura 
+                </p>
                 <a class="btn" href="/produtos/carrinho"> 
-                    <button class="comprar">Comprar</button> </a>           
-        
-        
-            </div>
-    
-        </div>
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %> 
+       
        
     </section>
     
     <article class="container-cuidados">
 
-        <h1 class="titulo">Uma Ajudinha</h1>
+        <h1 class="titulo">Como cuidar</h1>
        
         <div class="topico">
-            <h2 class="title">1.Sombra e frescor</h2>
-            <p class="texto"> Mantenha as flores em locais sombreados e arejados.
-                 Ao transportá-las em veículos, evite colocá-las em um porta-malas não ventilado ou sob a luz direta do sol.</p>
+            <h2 class="title">1.Cuidados Iniciais</h2>
+            <p class="texto"> Para seu buque durar mais, o primeiro cuidado que deve ter é retirar toda a embalagem, fitas e outros 
+                enfeites para facilitar a respiração das plantas. Antes de colocar na jarra, certifique-se que o 
+                recipiente esteja bem limpo assim como a água que será utilizada.</p>
 
 
-            <h2 class="title">2.Conserve no frio.</h2>
-            <p class="texto"> Caso precise que suas flores durem por mais tempo, elas poderão ser armazenadas na geladeira antes 
-                da ocasião em um local apropriado para mantê-las frescas por mais tempo. </p>
+            <h2 class="title">2.Para durar mais</h2>
+            <p class="texto"> É importante que seja feito um corte 2 cm acima da base do buquê em diagonal, 
+                utilizando uma tesoura de poda ou estilete afiado, para não provocar o esmagamento dos canais de absorção
+                da haste floral.
+                Estes cortes devem ser feitos embaixo de água corrente para evitar a entrada de ar nas hastes.</p>
 
         
-            <h2 class="title">3.Para transportar</h2>
-            <p class="texto"> Caso precise levar suas flores para outro local, as transporte preferencialmente deitadas
-                delicadamente em caixas rasas.</a></p>
+            <h2 class="title">3.Para recordar</h2>
+            <p class="texto"> Caso queira guardar uma recordação do buque recebido, recomendamos o a prensa de papel para a 
+                secagem das flores. Utilize jornais velhos ou uma lista telefônica sem utilidade para fazer as prensas.<br> Acomode as pétalas sobre as páginas, 
+                sem que fiquem dobradas em nem sobreponha uma à outra, feche a pagina e passe para a seguinte. 
+                Coloque um peso em cima e deixe por 2 a 4 semanas. Quando retirar, guarde em uma caixa de papelão 
+                com folhas de papel toalha ou manteiga. Tenha cuidado no manuseio, pois as mesmas estarão quebradiças.</a></p>
 
         </div>
 
@@ -92,7 +91,7 @@
         
         
         <a class="btn" href="/produtos/carrinho"> 
-            <button class="comprar">Adquira seu Conjunto</button> </a>   
+            <button class="comprar">Adquira seu Buquê</button> </a>   
 
 
     </div>

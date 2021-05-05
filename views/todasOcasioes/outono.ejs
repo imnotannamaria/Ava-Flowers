@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/Global.css">
-    <link rel="stylesheet" href="/stylesheets/Index.css">
-    <title>Ava Flowers | Produto</title>
+    <link rel="stylesheet" href="/stylesheets/produto.css">
+    <title>Ava Flowers</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
 </head>
 <body>
@@ -25,22 +25,74 @@
                 <input type="text">
                 <img src="/images/icons/lupa.png" alt="">
             </div>
-            <a href="/produtos/carrinho">
-                <div class="header-carrinho">
-                    <img src="/images/Carrinho.png" alt="">
-                </div>
-            </a>
+            <div class="header-carrinho">
+                <img src="/images/Carrinho.png" alt="">
+            </div>
         </div>
         
         <div class="header-wrapper-bot">
-            <a href="/categorias/todasFlores">Todas as Flores</a>
+            <a href="/categorias/todasFlores">Todas as flores</a>
             <a href="/categorias/buques">Buquês</a>
             <a href="/categorias/ocasioes">Ocasiões especiais</a>
             </ul>
         </div>
     </header>
 
-    <h1>Produto</h1>
+    <section class="container-produto">
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Um Buquê lembrando o Outono, alegre e elegante composto por mix de lindas flores em tons de laranja e amarelo. 
+                    São gérberas, lírios, rosas nacionais e importadas e alstroemérias. Embalado com carinho         </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %> 
+    
+        </div>
+       
+    </section>
+    
+    <article class="container-cuidados">
+
+        <h1 class="titulo">Uma Ajudinha</h1>
+       
+        <div class="topico">
+            <h2 class="title">1.Sombra e frescor</h2>
+            <p class="texto"> Mantenha as flores em locais sombreados e arejados.
+                 Ao transportá-las em veículos, evite colocá-las em um porta-malas não ventilado ou sob a luz direta do sol.</p>
+
+
+            <h2 class="title">2.Conserve no frio.</h2>
+            <p class="texto"> Caso precise que suas flores durem por mais tempo, elas poderão ser armazenadas na geladeira antes 
+                da ocasião em um local apropriado para mantê-las frescas por mais tempo. </p>
+
+        
+            <h2 class="title">3.Para transportar</h2>
+            <p class="texto"> Caso precise levar suas flores para outro local, as transporte preferencialmente deitadas
+                delicadamente em caixas rasas.</a></p>
+
+        </div>
+
+
+    </article>
+    <div class="container-btn">
+        
+        
+        <a class="btn" href="/produtos/carrinho"> 
+            <button class="comprar">Adquira seu Conjunto</button> </a>   
+
+
+    </div>
+      
+
+  
 
     <footer>
         <div class="container">

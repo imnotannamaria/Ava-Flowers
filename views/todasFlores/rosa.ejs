@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,21 +39,25 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Rosa.png">
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    As roseiras são uma das plantas mais comuns em casas e jardins, já que suas flores embelezam qualquer 
+                    canto. As rosas, com sua inequívoca fragrância e sua diversidade de cores, são ao mesmo tempo uma das
+                     flores preferidas na hora de fazer ramos para presentear
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
 
-        <div class="info">
-            <h1 class="nome"> Rosas </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-                As roseiras são uma das plantas mais comuns em casas e jardins, já que suas flores embelezam qualquer 
-                canto. As rosas, com sua inequívoca fragrância e sua diversidade de cores, são ao mesmo tempo uma das
-                 flores preferidas na hora de fazer ramos para presentear
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>    
-                    </div>
+    <% }); %>  
+        
+           </div>
                    
                
        
