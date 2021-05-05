@@ -14,6 +14,7 @@ var PagamentoRoutes = require('./routes/PagamentoRoutes');
 var StatusRoutes = require('./routes/StatusRoutes');
 var PedidosRoutes = require('./routes/PedidosRoutes');
 var VendasRoutes = require('./routes/VendasRoutes');
+var ErroRoutes = require('./routes/ErrosRoutes');
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use('/pagamentos', PagamentoRoutes);
 app.use('/status', StatusRoutes);
 app.use('/pedidos', PedidosRoutes);
 app.use('/vendas', VendasRoutes);
+app.use('/warning', ErroRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

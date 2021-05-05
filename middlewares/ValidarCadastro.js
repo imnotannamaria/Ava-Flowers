@@ -30,38 +30,26 @@ module.exports = async (request, response, next) => {
 
   //se achar um usuário o array retornou 1 ou mais
   if (user.length) {
-    response.status(400).json({ error: 'Email já cadastrado :(' });
+    response.status(400).redirect('/warning/emailexistente');
     return;
   } else {
     if (!email) {
-      response.status(400).json({ error: 'Por favor informe o seu email :(' });
+      response.status(400).redirect('/warning/erroemail');
     } else {
       if (!senha) {
-        response
-          .status(400)
-          .json({ error: 'Por favor informe a sua senha :(' });
+        response.status(400).redirect('/warning/errosenha');
       } else {
         if (!nome) {
-          response
-            .status(400)
-            .json({ error: 'Por favor informe a seu nome :(' });
+          response.status(400).redirect('/warning/erronome');
         } else {
           if (senha.length < 6 || senha.length > 20) {
-            response.status(400).json({
-              error: 'Senha inválida, sua senha deve ter de 6 a 12 digitos.',
-            });
+            response.status(400).redirect('/warning/errosenhainvalida');
           } else {
             if (!logradouro || !cidade || !estado || !bairro || !numero) {
-              response.status(400).json({
-                error: 'Todos os campos obrigatórios devem ser preenchidos',
-              });
-              return;
+              response.status(400).redirect('/warning/errotodoscampos');
             } else {
               if (logradouro.length < 5) {
-                response
-                  .status(400)
-                  .json({ error: 'Inisira um logradouro válido' });
-                return;
+                response.status(400).redirect('/warning/errologradouro');
               } else {
                 if (2 > 1) {
                   const userExists = await Cliente.findOne({
@@ -69,9 +57,9 @@ module.exports = async (request, response, next) => {
                   });
                   // se existir, vou devolver uma mensagem de erro
                   if (userExists) {
-                    return response
+                    response
                       .status(400)
-                      .json({ error: 'Usuário já existe!' });
+                      .redirect('/warning/erroEmailExistente');
                   } else {
                     next();
                   }
