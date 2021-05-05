@@ -21,20 +21,19 @@
 }
 
 /*teste do class="col-lg card"*/
-.col-lg{
+.col-lg {
   border: 0;
-  left:3%;
+  left: 3%;
   /* margin-bottom: 100px;
   margin-right: 80px; */
-  
+
   margin-left: 20px;
   height: 400px;
   width: 400px;
   display: inline-block;
-  
 }
 
-.teste{
+.teste {
   margin-bottom: 50px;
 }
 
@@ -42,7 +41,6 @@
   border: 0;
   margin-bottom: 300px;
   margin-right: 80px;
-
 }
 
 .cardinfo {
@@ -106,6 +104,22 @@
   width: 100%;
   height: 375px;
   border-radius: 5% 5% 0% 0%;
+}
+
+.logout {
+  margin-left: 1800px;
+}
+.foto-logout {
+  width: 50px;
+  height: 50px;
+}
+
+.foto-login {
+  width: 100px;
+  height: 100px;
+}
+.login {
+  display: block;
 }
 
 @media only screen and (max-width: 620px) {
