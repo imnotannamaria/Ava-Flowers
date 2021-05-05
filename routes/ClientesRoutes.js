@@ -19,4 +19,6 @@ router.put('/:id', clientesController.update);
 
 router.delete('/:id', clientesController.delete);
 
+router.get('/logoff', clientesController.logoff);
+
 module.exports = router;
