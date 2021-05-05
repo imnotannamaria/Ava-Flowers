@@ -68,7 +68,7 @@ const clientesController = {
       numero,
       complemento,
     });
-    request.session.clientelogado = novoCliente;
+    req.session.clientelogado = novoCliente;
     return res.redirect('/clientes/confirmacao');
   },
 
