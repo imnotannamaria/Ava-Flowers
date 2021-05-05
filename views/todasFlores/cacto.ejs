@@ -12,28 +12,30 @@
     <link rel="stylesheet" href="/stylesheets/produto.css">
     <title>Ava Flowers</title>
     <link rel="icon" type="imagem/png" href="/images/icons/logo.ico" />
-</head>
-<body>
-    <header>
-        <div class="header-wrapper-top">
-            <a href="/">
-                <div class="logoHeader">
-                    <img src="/images/LogoHeader.png" alt="">
-                </div>
-            </a>
-           
-            <div class="header-carrinho">
-                <img src="/images/Carrinho.png" alt="">
+    
+    </head>
+    <body>
+        <header>
+            <div class="header-wrapper-top">
+                <a href="/">
+                    <div class="logoHeader">
+                        <img src="/images/LogoHeader.png" alt="">
+                    </div>
+                </a>
+                <a href="/produtos/carrinho">
+                    <div class="header-carrinho">
+                        <img src="/images/Carrinho.png" alt="">
+                    </div>
+                </a>
             </div>
-        </div>
-        
-        <div class="header-wrapper-bot">
-            <a href="/categorias/todasFlores">Todas as flores</a>
-            <a href="/categorias/buques">Buquês</a>
-            <a href="/categorias/ocasioes">Ocasiões especiais</a>
-            </ul>
-        </div>
-    </header>
+            
+            <div class="header-wrapper-bot">
+                <a href="/categorias/todasFlores">Todas as flores</a>
+                <a href="/categorias/buques">Buquês</a>
+                <a href="/categorias/ocasioes">Ocasiões especiais</a>
+                </ul>
+            </div>
+        </header>
 
     <section class="container-produto">
         <% produtos.forEach(function (produto)  {%>
