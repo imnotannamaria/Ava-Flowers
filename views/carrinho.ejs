@@ -70,10 +70,12 @@
                                     </div>
                                 </div>
                             
-                                <a href="/produtos/carrinho?isTrash=true&id=<%= produto.id %>">
-                                    <div class="excluir">
-                                        <img src="/images/icons/trash.png" alt="">
-                                    </div>
+                                <!-- <a href="/produtos/carrinho?isTrash=true&id=<%= produto.id %>"> -->
+                                    <a href="/produtos/carrinho?isTrash=true&id=<%= produto.id %>">
+                                        <div class="excluir">
+                                            <img src="/images/icons/trash.png" alt="">
+                                        </div>
+                                    </a>
                                 </a>
                             </div>
                         </div>
@@ -105,37 +107,6 @@
         </div>
     </div>  
 
-    <!--div id="modal2" class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" style="color: red; font-weight: bold;">ATENÇÃO</h5>
-                </div>
-                <div class="modal-body">
-                <p>Selecione uma quantidade válida do produto!</p>
-                </div>
-                <div class="modal-footer">
-                <button onclick="fecharBotao()" type="button" class="btn btn-success">Continuar comprando</button>
-                </div>
-            </div>
-            </div>
-    </!--div>
-    <div-- id="modal1" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" style="color: red; font-weight: bold;">ATENÇÃO</h5>
-            </div>
-            <div class="modal-body">
-            <p>Infelizmente não temos essa quantidade de produto disponível. :(</p>
-            </div>
-            <div class="modal-footer">
-            <button onclick="fecharBotao()" type="button" class="btn btn-success">Continuar comprando</button>
-            </div>
-        </div>
-        </div>
-</div-->
-
     <script>
         document.querySelectorAll('.botao').forEach(item => {
             item.addEventListener('click', event => {
@@ -148,6 +119,7 @@
                 }
             })
         })
+
     </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

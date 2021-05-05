@@ -243,16 +243,16 @@ h1 {
 
 @media only screen and (max-width: 620px) {
   .produto {
-    height: 600px;
-    width: 380px;
+    height: 530px;
+    width: 450px;
     flex-direction: column;
   }
 
   .excluir {
-    height: 100%;
+
     display: flex;
     align-items: center;
-    margin-right: 600px;
+    margin-right: 530px;
   }
 
   .botao-finalizar{
@@ -260,6 +260,31 @@ h1 {
   }
 
 }
+
+@media only screen and (max-width: 550px) {
+  .produto {
+    height: 480px;
+    width: 390px;
+    flex-direction: column;
+  }
+
+  .excluir {
+
+    display: flex;
+    align-items: center;
+    margin-right: 580px;
+  }
+
+  .botao-finalizar{
+    font-size: 20px;
+  }
+
+}
+
+
+
+
+
 
 
 

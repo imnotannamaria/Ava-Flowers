@@ -127,24 +127,6 @@ body{
   display: block;
 }
 
-@media only screen and (max-width: 1526px) {
-
-  .card {
-    margin-right: 20px;
-    width: 350px;
-  }
-
-  .mais-vendidias {
-    margin-left: 300px;
-  }
-  
-}
-
-@media only screen and (max-width: 1220px) {
-  .card {
-    margin-right: 0;
-  }
-}
 
 @media only screen and (max-width: 620px) {
   /* SECTION COVER */
