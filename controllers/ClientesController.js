@@ -32,7 +32,7 @@ const clientesController = {
   },
 
   confirmacao: (request, response) => {
-    return response.render('confirmacaoCompra');
+    return response.render('confirmacaoCompra', { cliente: request.session.clientelogado });
   },
 
   create: async (req, res) => {
@@ -61,7 +61,7 @@ const clientesController = {
       numero,
       complemento,
     });
-
+    request.session.clientelogado = novoCliente;
     return res.redirect('/clientes/confirmacao');
   },
 
