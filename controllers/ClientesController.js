@@ -1,3 +1,4 @@
+
 const bcrypt = require('bcryptjs');
 const { Cliente, sequelize } = require('../models/');
 
@@ -17,7 +18,7 @@ const clientesController = {
     //se retornar true e for ele mesmo
     if (cliente && bcrypt.compareSync(senha, cliente.senha)) {
       request.session.clientelogado = cliente;
-      return response.redirect('/');
+      return response.redirect('/clientes/confirmacao');
     } else {
       return response.redirect('/clientes/login');
     }
@@ -28,6 +29,7 @@ const clientesController = {
 
     return res.redirect('/');
   },
+
   cadastro: (request, response) => {
     return response.render('cadastro');
   },
@@ -37,7 +39,7 @@ const clientesController = {
   },
 
   confirmacao: (request, response) => {
-    return response.render('confirmacaoCompra');
+    return response.render('confirmacaoCompra', { cliente: request.session.clientelogado });
   },
 
   create: async (req, res) => {
@@ -66,7 +68,7 @@ const clientesController = {
       numero,
       complemento,
     });
-
+    request.session.clientelogado = novoCliente;
     return res.redirect('/clientes/confirmacao');
   },
 
