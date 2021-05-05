@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,22 +39,23 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Margarida.png">
-
-        <div class="info">
-            <h1 class="nome"> Margarida </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-                As margaridas são flores com uma grande variedade de cores e cada uma delas tem um determinado significado, 
-                também são muito decorativas e não precisam de muitos cuidados.
-
-
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
                
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>     
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    As margaridas são flores com uma grande variedade de cores e cada uma delas tem um determinado significado, 
+                também são muito decorativas e não precisam de muitos cuidados.
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %>  
+        
         </div>
        
     </section>

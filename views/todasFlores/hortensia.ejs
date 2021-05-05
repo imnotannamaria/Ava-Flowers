@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -38,23 +38,24 @@
         </div>
     </header>
     <section class="container-produto">
-        <img class="imagem" src="/images/todasFlores/Hortensia.png">
-
-        <div class="info">
-            <h1 class="nome"> Hortênsia </h1>
-         
-            <span class="preco">R$20,00</span>
-            
-            <p class="informacoes">
-                Hortênsias estão entre as flores mais charmosas do planeta. Elas costumam ser fáceis de se cultivar
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Hortênsias estão entre as flores mais charmosas do planeta. Elas costumam ser fáceis de se cultivar
                  e exigem cuidados básicos, podendo se desenvolver em diversos climas e solos. As cores variam entre
                  o azul clarinho, o rosa, o branco e a lavanda. Algumas vezes, você pode ter todas essas cores em uma 
                  só plantinha
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
 
-               
-            </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>     
+<% }); %>     
         </div>
        
     </section>

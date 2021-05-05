@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,26 +39,21 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/ocasiões/diaDaMulher.png">
-
-        <div class="info">
-            <h1 class="nome">Buque Dia das Mulheres </h1>
-         
-            <span class="preco">R$65,00</span>
-            
-            <p class="informacoes">
-            Torne o Dia da Mulher especial de quem você mais ama!           
-             <br>Um delicado apanhado com rosas colombianas, rosas nacionais e mini rosas em tons de salmão.
-              Embrulhado como um buquê de rosas, cheio de carinho em meio à folhagens diversas. </p>
-            <div class="container-btn">
-        
-        
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Torne o Dia da Mulher especial de quem você mais ama!           
+                    <br>Um delicado apanhado de flores embrulhado cheio de carinho em meio à folhagens diversas. </p>
                 <a class="btn" href="/produtos/carrinho"> 
-                    <button class="comprar">Comprar</button> </a>           
-        
-        
-            </div>
-    
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %> 
         </div>
        
     </section>

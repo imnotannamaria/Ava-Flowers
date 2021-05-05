@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,26 +39,22 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/ocasiões/DiaDosNamorados.png">
-
-        <div class="info">
-            <h1 class="nome"> Dia Dos Namorados </h1>
-         
-            <span class="preco">10%OFF_<br>  ̶7̶0̶  R$62,00
-            </span>
-            
-            <p class="informacoes">
-                Demonstre seu amor no Dia dos Namorados!  <br>Puro charme... Arranjo com mistura harmoniosa de rosas 
-                e mini rosas alaranjadas, em elegante vasinho de vidro. 
-                Embalagem especial!!  </p>
-            <div class="container-btn">
-        
-        
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Demonstre seu amor no Dia dos Namorados!  <br>Puro charme... Arranjo com mistura harmoniosa de rosas 
+                    rosadas, em um elegante vasinho de vidro. 
+                    Embalagem especial!!  </p>             </p>
                 <a class="btn" href="/produtos/carrinho"> 
-                    <button class="comprar">Comprar</button> </a>           
-        
-        
-            </div>
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %> 
     
         </div>
        

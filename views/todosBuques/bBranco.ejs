@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,19 +39,22 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/buques/rosas_nacionais.png">
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                    Um buquê lindo de flores brancas para deixar o dia da pessoa amada mais alegre
+                </p>
+                <a class="btn" href="/produtos/carrinho"> 
+                    <button class="comprar">Comprar</button> </a> 
 
-        <div class="info">
-            <h1 class="nome"> Buquê de Rosas Nacionais</h1>
-         
-            <span class="preco">RS90,00</span>
-            
-            <p class="informacoes">
-                Lindo buquê de Rosas nacionais em tons suaves, com delicadas folhagens e pontinhos de chuva de prata.
-                  Tradicionalmente encantador, para surpreender e emocionar.         </p>
-            <a class="btn" href="/produtos/carrinho"> 
-                <button class="comprar">Comprar</button> </a>       
-        </div>
+<% }); %> 
+       
        
     </section>
     
@@ -92,34 +95,3 @@
 
 
     </div>
-      
-
-  
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <h3>Outros meios de contato</h3>
-                    <div class="social">
-                        <div class="icon-wrapper">
-                            <a href=""><img src="/images/icons/whatsapp.png" alt=""></a>
-                        </div>
-                        <div class="icon-wrapper">
-                            <a href=""><img src="/images/icons/email.png" alt=""></a>
-                        </div>
-                        <div class="icon-wrapper">
-                            <a href=""><img src="/images/icons/instagram.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/usm/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-</html>

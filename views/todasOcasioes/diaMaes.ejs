@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-wrapper-top">
-            <a href="">
+            <a href="/">
                 <div class="logoHeader">
                     <img src="/images/LogoHeader.png" alt="">
                 </div>
@@ -39,26 +39,22 @@
     </header>
 
     <section class="container-produto">
-        <img class="imagem" src="/images/ocasiões/diaDasMaes.png">
-
-        <div class="info">
-            <h1 class="nome"> Dia das mães </h1>
-         
-            <span class="preco">R$80,00</span>
-            
-            <p class="informacoes">
-                Dia das Mães, faça sua homenagem sincera a sua mãe! Elegante buquê de rosas colombianas vermelhas com seis rosas 
+        <% produtos.forEach(function (produto)  {%>
+            <img class="imagem" src="<%= produto.img %> ">
+            <div class="info">
+               
+                <h1 class="nome"> <%=produto.nome%> </h1>
+             
+                <span class="preco">R$<%=produto.valor%></span>
+                
+                <p class="informacoes">
+                 Dia das Mães, faça sua homenagem sincera a sua mãe! Elegante buquê de rosas 
                 grandes, embrulhadas com carinho 
-                em papel de ceda branco, com base preta e amarrados por um sofisticado laço de cetim.  </p>
-            <div class="container-btn">
-        
-        
+                em papel de ceda branco, com base preta e amarrados por um sofisticado laço de cetim.               </p>
                 <a class="btn" href="/produtos/carrinho"> 
-                    <button class="comprar">Comprar</button> </a>           
-        
-        
-            </div>
-    
+                    <button class="comprar">Comprar</button> </a> 
+
+<% }); %> 
         </div>
        
     </section>
