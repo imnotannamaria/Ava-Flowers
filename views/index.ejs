@@ -23,10 +23,6 @@
                         <img src="/images/LogoHeader.png" alt="">
                     </div>
                 </a>
-                <div class="header-buscar">
-                    <input type="text">
-                    <img src="/images/icons/lupa.png" alt="">
-                </div>
                 <a href="/produtos/carrinho">
                     <div class="header-carrinho">
                         <img src="/images/Carrinho.png" alt="">
@@ -52,8 +48,6 @@
         </section>
 
         <section class="mais-vendidias">
-            <!-- <div class="container"> -->
-              
                     <% produtos.slice(-9).forEach( function (produto) { %>
                         <div class="col-lg card">
                             <div
@@ -64,12 +58,11 @@
                             <div class="cardinfo">
                         
                                     <a href="<%=produto.descricao%>"><p><%= produto.nome %></p></a>
-                           
                                 <div class="preco-mais">
                                     <div class="preco">
                                         <%= produto.valor %> $
                                     </div>
-                                    <a href="/produtos/carrinho">
+                                    <a href="/produtos/carrinho?id=<%= produto.id %>">
                                         <div class="mais">
                                             +
                                         </div>
@@ -91,8 +84,8 @@
                 </div>
                 <div class="form-contato">
                     <p>Mande uma mensagem: </p>
-                    <input type="text" name="nome" placeholder ="Digite seu nome">
-                    <input type="email" name="email" placeholder ="Digite seu email">
+                    <input type="text"  placeholder ="Digite seu nome">
+                    <input type="email"  placeholder ="Digite seu email">
                     <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder ="Digite sua mensagem"></textarea>
                     <button type="submit" id="btn-subimit-contact">Enviar</button>
                 </div>

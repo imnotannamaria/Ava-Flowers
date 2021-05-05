@@ -9,19 +9,20 @@ const clientesController = {
   auth: async (request, response) => {
     const { email, senha } = request.body;
 
-    const cliente = await cliente.findOne({
+    const cliente = await Cliente.findOne({
       where: {
         email,
       },
     });
     //se retornar true e for ele mesmo
     if (cliente && bcrypt.compareSync(senha, cliente.senha)) {
-      request.session.clienteLogado = cliente;
+      request.session.clientelogado = cliente;
       return response.redirect('/clientes/confirmacao');
     } else {
       return response.redirect('/clientes/login');
     }
   },
+
   cadastro: (request, response) => {
     return response.render('cadastro');
   },
@@ -36,9 +37,9 @@ const clientesController = {
 
   create: async (req, res) => {
     let {
-      nome,
       email,
       senha,
+      nome,
       logradouro,
       cidade,
       estado,
@@ -50,9 +51,9 @@ const clientesController = {
     const senhaCrypt = bcrypt.hashSync(senha, 10);
 
     let novoCliente = await Cliente.create({
-      nome,
       email,
       senha: senhaCrypt,
+      nome,
       logradouro,
       cidade,
       estado,
@@ -67,9 +68,9 @@ const clientesController = {
   update: async (req, res) => {
     const { id } = req.params;
     const {
-      nome,
       email,
       senha,
+      nome,
       logradouro,
       cidade,
       estado,
@@ -80,9 +81,9 @@ const clientesController = {
 
     const cliente = await Cliente.update(
       {
-        nome,
         email,
         senha,
+        nome,
         logradouro,
         cidade,
         estado,

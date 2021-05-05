@@ -43,6 +43,7 @@ header{
 .header-wrapper-top{
     display: flex;
     align-items: center;
+    justify-content:  space-between;
 }
 
 .logoHeader{
@@ -51,26 +52,7 @@ header{
 
 .logoHeader img{
     width: 180px;
-    height: 90px;
-}
-
-.header-buscar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    flex: 1;
-}
-
-.header-buscar input{
-    width: 75%;
-    height: 45px;
-    border-radius: 10px;
-    border: 0;
-}
-
-.header-buscar img{
-    padding-left: 20px;
+    height: 80px;
 }
 
 .header-carrinho{

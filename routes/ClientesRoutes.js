@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const clientesController = require('../controllers/clientesController');
+const clientesController = require('../controllers/ClientesController');
 const validarCadastro = require('../middlewares/ValidarCadastro');
 
 router.get('/', clientesController.index);
