@@ -13,19 +13,33 @@ const ProdutosController = {
 
   carrinho: async (request, response) => {
     let id = request.query.id;
-    
+    let isTrash = request.query.isTrash;
+    let isRemove = request.query.isRemove;
+
     if (id) {
       let index = produtosCarrinho.findIndex(findProduto, id);
 
       if (index >= 0) {
-        produtosCarrinho[index].qtde++;
+        if (isTrash) {
+          produtosCarrinho.splice(index, 1);
+        } else {
+          if (isRemove) {
+            produtosCarrinho[index].qtde--;
+            if (produtosCarrinho[index].qtde == 0) {
+              produtosCarrinho.splice(index, 1);
+            }
+          } else {
+            produtosCarrinho[index].qtde++;
+          }
+        }
       } else {
         const novoProduto = await Produto.findByPk(id);
         novoProduto.qtde = 1;
+        console.log(novoProduto);
         produtosCarrinho.push(novoProduto);
       }
 
-      response.redirect('/produtos/carrinho');
+      return response.redirect('/produtos/carrinho');
     }
 
     let total = 0;
