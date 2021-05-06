@@ -22,7 +22,7 @@ body{
 
 .mais-vendidias {
   margin-top: 200px;
-
+  margin-left: 2rem;
 }
 
 /*teste do class="col-lg card"*/
@@ -127,6 +127,12 @@ body{
   display: block;
 }
 
+@media only screen and (max-width: 840px) {
+  .mais-vendidias {
+    margin-left: 0rem;
+  }
+}
+
 
 @media only screen and (max-width: 620px) {
   /* SECTION COVER */
@@ -135,5 +141,22 @@ body{
     left: 2rem;
   }
 }
+
+@media only screen and (max-width: 660px) {
+  .col-lg {
+    margin-left: 0;
+    height: 300px;
+    width: 100px;
+
+  }
+
+  .card {
+    border: 0;
+    margin-bottom: 300px;
+    margin-right: 0px;
+    left: 50px;
+  }
+}
+
 
 

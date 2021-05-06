@@ -21,7 +21,10 @@ body{
 
 .todasFlores {
   margin-top: 100px;
+  margin-left: 2rem;
 }
+
+
 
 .card {
   border: 0;
@@ -115,6 +118,15 @@ body{
   justify-content: center;
   cursor: pointer;
   margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1220px) {
+
+  .buque{
+      margin-left: 0rem;
+  }
+  
+
 }
 
 @media only screen and (max-width: 620px) {

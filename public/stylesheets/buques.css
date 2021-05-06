@@ -1,5 +1,6 @@
 .buque{
     margin-top: 100px;
+    margin-left: 1.5rem;
 }
 
 .foto{
@@ -108,7 +109,18 @@
 
 
 
+@media only screen and (max-width: 1220px) {
 
+    .card{
+        margin-right: 0;
+    }
+
+    .buque{
+        margin-left: 0rem;
+    }
+    
+
+}
 
 @media only screen and (max-width: 620px) {
 
@@ -120,10 +132,3 @@
 
 }
 
-@media only screen and (max-width: 1220px) {
-
-    .card{
-        margin-right: 0;
-    }
-
-}

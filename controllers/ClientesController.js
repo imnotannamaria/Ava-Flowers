@@ -18,7 +18,7 @@ const clientesController = {
     //se retornar true e for ele mesmo
     if (cliente && bcrypt.compareSync(senha, cliente.senha)) {
       request.session.clientelogado = cliente;
-      return response.redirect('/clientes/confirmacao');
+      return response.redirect('/');
     } else {
       return response.redirect('/clientes/login');
     }
@@ -69,7 +69,7 @@ const clientesController = {
       complemento,
     });
     req.session.clientelogado = novoCliente;
-    return res.redirect('/clientes/confirmacao');
+    return res.redirect('/clientes/login');
   },
 
   update: async (req, res) => {
